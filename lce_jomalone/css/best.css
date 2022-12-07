@@ -1,0 +1,768 @@
+/*@font-face*/
+/*나눔고딕*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+/*나눔명조*/
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+/*조선일보명조*/
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*웹폰트 적용 필요*/
+
+
+
+
+/*초기화*/
+*{margin:0; padding:0; box-sizing: border-box;}
+ul{list-style:none;}
+a{text-decoration: none; color:inherit;}
+
+/*전체*/
+
+html{
+  scroll-behavior: smooth;
+}
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+body{
+  /*font-family: "나눔명조", "Nanum Myeongjo";*/
+  font-family: 'Nanum Myeongjo', serif;
+  background-color:#d5d5ce;
+  user-select: none;
+  color:#434343;
+}
+
+/*header*/
+header{
+  width:100%;
+  min-width:1900px;
+  margin:auto;
+}
+header .logo{
+  width:100%;
+  height:120px;
+  text-align: center;
+  position: fixed;
+  display:block;
+  top:0;
+  z-index:100;
+  transition:top 0.2s ease-in-out;
+  background-color:#d5d5ce;
+  box-shadow: 0px 10px 10px -12px #2b261e; /*좌우 상하 blur 그림자크기 컬러. 이중 그림자크기를 마이너스로 주면 아래에만 효과적용 가능*/
+}
+header .nav-up{/*js로 추가될 클래스*/
+  top:-120px;
+}
+header .logo a{
+  display:block;
+  height:120px;
+}
+header .logo img{
+  box-sizing: border-box;
+}
+
+header .gnb{
+  margin-top:120px;
+  background-color: #716b62;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  z-index:99;
+}
+header .gnb h1{
+  font-size:23px;
+  /* hover시  ??? */text-decoration:underline 1px;
+}
+header .gnb a{
+  color:#fff;
+}
+header .gnb a:hover{
+  text-decoration: underline 1px;
+}
+header .gnb h1 a:hover{
+  text-decoration: underline 2px;
+}
+header .gnb .menu{
+  height:80px;
+  display:flex;
+}
+header .gnb .menu li{
+  margin-right:46px;
+  height:80px;
+  line-height:80px;
+}
+header .gnb .shopping .wrap{ /*드롭다운메뉴를 가려줌*/
+  display:none;
+}
+header .gnb .wrap .col{
+  display:flex;
+}
+/*header .gnb .wrap .col li{line-height:80px;} 밑과 중복?*/
+
+header .gnb li h1{
+  padding-left:100px;
+}
+header .gnb .login{
+  display:flex;
+  margin-right:60px;
+}
+header .gnb .login li{
+  margin-left:27px;
+  line-height:80px; /*위와 중복?*/
+  font-size:18px;
+  font-weight:bold;
+}
+header .gnb .login li:last-child{
+  text-decoration: underline 1px;
+}
+header .gnb .login li:last-child:hover{
+  text-decoration:underline 2px;
+}
+header .gnb .wrap{
+  position:absolute;
+  width:100%;
+}
+header .gnb .dropdown{
+  width:100%;
+  background-color:rgba(83,83,80,0.5);
+  left:0;
+}
+
+
+
+#mainBest{
+  width:1290px;
+  height:720px;
+  margin: 80px auto 0px;
+}
+#mainBest > h1{
+  font-size:35px;
+  font-weight: 300;
+  line-height:50px;
+  margin-left: 70px;
+  letter-spacing: 1px;
+}
+#outerArrow{
+  width:100%;
+  height:680px;
+  position:relative;
+  /*border:1px solid red;*/
+}
+#border_area{
+  width:1180px;
+  height:640px;
+  border-top:1px solid #434343;
+  border-bottom:1px solid #434343;
+  margin:0px auto 40px;
+}
+#mainDouble{
+  width:1120px;
+  height:560px;
+  margin:40px auto 40px;
+  display:flex;
+}
+#mainDouble .left{
+  width:560px;
+  height:100%;
+  overflow: hidden; /*          */
+  position:relative;
+}
+#mainDouble .left .colognes{
+  width:400%;
+  height:100%;
+  display:flex;
+  position:absolute;
+}
+#mainDouble .colognes > .box{
+  width:25%;
+  height:560px;
+}
+#mainDouble .colognes > .box img{
+  margin:0px 30px 0px;
+}
+#mainDouble .colognes > .box h2{
+  text-align: center;
+  font-size:18px;
+  line-height:40px;
+  font-family: 'Chosunilbo_myungjo';
+  font-weight: 500;
+  margin-top:3px;
+}
+#mainBest .arrow{
+  background-color: transparent;
+  border:none;
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  z-index:100;
+}
+#mainBest #outerArrow .prev{
+  left:10px;
+}
+#mainBest #outerArrow .next{
+  right:10px;
+}
+
+
+
+/* #bestArea = .citrus */
+
+#bestArea{
+  width:1920px;
+  margin:160px auto 0px;
+  position: relative;
+}
+#bestArea.citrus{
+  margin-top:200px;
+}
+#bestArea.woody{
+  margin-bottom:420px;
+}
+#bestArea .title{
+  width:100%;
+  height:160px;/*원래 160px*/
+  margin-bottom:160px;
+}
+.citrus .title{/*여기부터 안됨.... 왜지 -> 아이디는 단 하나만! 클래스처럼 여러개 줄수없음*/
+  background: url(../img/best/banner_citrus.jpg) center/cover;
+}
+#bestArea .title .titleArea{
+  padding:60px 0px;
+  box-sizing: border-box;
+}
+#bestArea .title .titleArea p{
+  width:140px;
+  height:40px;
+  margin:auto;
+  text-align: center;
+  line-height:40px;
+  font-weight: bold;
+  font-size:25px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+#item_area{
+  width:1290px;
+  /*height:;*/
+  margin:auto;
+}
+#item_area > .wrap{
+  width:100%;
+  /*height:600px;*/
+  display:flex;
+}
+#item_area .wrap > .left{
+  width:580px;
+  height:600px;
+  overflow: hidden;
+  margin-left:55px;
+  margin-right:20px;
+}
+#item_area .wrap > .right{
+  width:635px;
+  height:100%;
+}
+#item_area .innerarrow{
+  width:550px;
+  height:600px;
+  overflow: hidden;
+  position:relative;
+}
+#item_area .right .box{
+  width:300%;
+  display:flex;
+  position:absolute;
+}
+#item_area .right .box > li{
+  width:33.3%;
+  height:600px;
+  display:flex;
+}
+#item_area .right .box > li .items:hover .txt{
+  color:rgb(107, 54, 23);
+  text-shadow: 3px 3px 10px rgba(83,83,80,0.6);
+}
+#item_area .right .box > li .items{
+  padding-top:40px;
+  width:350px;
+  transition:0.5s;
+}
+
+#item_area .right .box > li .txt{
+  width:200px;
+  height:200px;
+  text-align: center;
+  font-size:17px;/*원래 20px*/
+  margin:30px auto 0;
+  line-height:20px;
+  font-weight: 500;
+  text-shadow: 3px 3px 7px rgba(83,83,80,0.6);
+}
+#item_area .right .box .items > .txt p:nth-child(2){
+  margin:8px 0px;
+}
+#item_area .right .box .items > .txt .one{
+  line-height:40px;
+}
+#item_area .right .box > li .txt .price_ml{
+  width:180px;
+  margin:auto;
+  display:flex;
+  justify-content: space-between;
+}
+#item_area .right .ingre{
+  height:100%;
+  position:relative;
+  /*justify-content: space-between; 안먹음*/
+}
+#item_area .right .ingre > li{
+  width:170px;
+  height:170px;
+  background: url(../img/best/ingre_circle.png)center/cover;
+  margin-bottom:45px;
+  cursor:pointer;
+  transition:0.4s;
+}
+#item_area .right .ingre > li:last-child{
+  margin-bottom:0;
+}
+#item_area .right .ingre img{
+  width:130px;
+}
+.citrus .right .fir .ingre > li:nth-child(1) img{
+  width:130px;
+  margin-left:13px;
+}
+.citrus .right .fir .ingre > li:last-child > img{
+  width:150px;
+  margin-left:16px;
+  margin-top:6px;
+}
+.citrus .right .sec .ingre > li:nth-child(1) img{
+  margin-left:12px;
+}
+.citrus .right .sec .ingre > li:nth-child(2) img{
+  width:210px;
+  margin-left:10px;
+}
+.citrus .right .sec .ingre > li:nth-child(3) img{
+  width:190px;
+  margin-left:10px;
+}
+.citrus .right .thr .ingre > li:nth-child(1) img{
+  width:200px;
+  margin-bottom:20px;
+  margin-left:5px;
+}
+.citrus .right .thr .ingre > li:nth-child(3) img{
+  width:180px;
+  margin:0 0 10px 10px;
+}
+
+
+/*.ingre .hover*/
+#item_area .right .ingre .hover{
+  position:absolute;
+  right:0px;
+  opacity:0;
+  transition:0.4s;
+  /*width:230px;
+  height:140px;
+  background-color: rgba(238,238,238,0.5);#eeeeee;*/
+  background: url(../img/best/ingre_circle.png) center/cover;
+  width:170px;
+  height:170px;
+  border-radius: 30px;
+  text-align: center;
+  padding:20px 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:12px;
+}
+#item_area .right .ingre .hover .hoverTxt h3{
+  font-size:13px;
+}
+#item_area .right .ingre .hoverTxt > p:nth-child(2){
+  font-size:12px;
+  margin:10px 0px;
+  text-decoration: underline 1px solid;
+}
+#item_area .right .ingre .hoverTxt > p:nth-child(3){
+  line-height:18px;
+}
+#item_area .right .ingre > li:hover{
+  background-image: url(../img/best/ingre_circlr_hover.png);
+}
+#item_area .right .ingre > li:hover .hover{
+  opacity:1;
+}
+/**/
+#item_area .right .arrow{
+  position:absolute;
+  background-color: transparent;
+  border:none;
+  cursor:pointer;
+  top:50%;
+  transform: translateY(-50%);
+  z-index:100;
+}
+#item_area .right .prev{
+  left:15px; 
+}
+#item_area .right .next{
+  right:-15px;
+}
+
+#bestArea .seeAll{
+  position: absolute;
+  background-color: transparent;
+  box-shadow: 3px 3px 8px rgba(83,83,80,0.4);
+  border:1px solid;
+  width:280px;
+  height:40px;
+  font-size:22px;
+  text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  color:#434343;
+  bottom:-100px;
+  left:50%;
+  transform: translateX(-50%);
+  cursor:pointer;
+}
+
+
+
+/*fruity*/
+.fruity .title{
+  background: url(../img/best/banner_fruity.jpg) center/cover;
+}
+.fruity .right .fir .ingre > li:nth-child(1) img{
+  width:140px;
+  margin-left:10px;
+}
+.fruity .right .fir .ingre > li:nth-child(2) img{
+  width:180px;
+  margin-left:13px;
+  margin-top:10px;
+}
+.fruity .right .fir .ingre > li:nth-child(3) img{
+  margin-left:8px;
+}
+.fruity .right .fir .ingre > li:nth-child(3) img{
+  width:150px;
+  margin:0 0px 10px 5px;
+}
+.fruity .right .sec .ingre > li:nth-child(1) img{
+  margin-left:15px;
+}
+.fruity .right .sec .ingre > li:nth-child(2) img{
+  margin-left:3px;
+}
+.fruity .right .sec .ingre > li:nth-child(3) img{
+  margin-left:8px;
+}
+.fruity .right .thr .ingre > li:nth-child(1) img{
+  margin-left:10px;
+}
+.fruity .right .thr .ingre > li:nth-child(2) img{
+  width:200px;
+  margin-left:17px;
+}
+
+
+/*floral*/
+.floral .title{
+  background: url(../img/best/banner_floral.jpg) center/cover;
+}
+.floral .right .fir .ingre > li:nth-child(1) img{
+  margin-left:-3px;
+}
+.floral .right .fir .ingre > li:nth-child(2) img{
+  margin-left:5px;
+}
+.floral .right .fir .ingre > li:nth-child(3) img{
+  margin-left:10px;
+}
+.floral .right .sec .ingre > li:nth-child(1) img{
+  margin-left:12px;
+}
+.floral .right .sec .ingre > li:nth-child(3) img{
+  margin-left:15px;
+}
+.floral .right .thr .ingre > li:nth-child(1) img{
+  margin-top:13px;
+  margin-left:33px;
+}
+.floral .right .thr .ingre > li:nth-child(2) img{
+  margin-top:10px;
+  margin-left:23px;
+}
+.floral .right .thr .ingre > li:nth-child(3) img{
+  margin-top:10px;
+  margin-left:30px;
+}
+
+
+/*spicy*/
+.spicy .title{
+  background: url(../img/best/banner_spicy.jpg) center/cover;
+}
+.spicy .right .fir .ingre > li:nth-child(1) img{
+  margin-top:10px;
+  margin-left:10px;
+}
+.spicy .right .fir .ingre > li:nth-child(2) img{
+  margin-top:5px;
+  margin-left:12px;
+}
+.spicy .right .fir .ingre > li:nth-child(3) img{
+  margin-top:5px;
+  margin-left:8px;
+}
+.spicy .right .sec .ingre > li:nth-child(2) img{
+  margin-left:5px;
+}
+.spicy .right .sec .ingre > li:nth-child(3) img{
+  margin-left:10px;
+}
+.spicy .right .thr .ingre > li:nth-child(1) img{
+  margin-left:10px;
+}
+.spicy .right .thr .ingre > li:nth-child(2) img{
+  margin-top:9px;
+  margin-left:48px;
+}
+.spicy .right .thr .ingre > li:nth-child(3) img{
+  margin-left:5px;
+}
+
+
+/*woody*/
+.woody .title{
+  background: url(../img/best/banner_woody.jpg) center/cover;
+}
+.woody .right .fir .ingre > li:nth-child(1) img{
+  margin-top:7px;
+  margin-left:48px;
+}
+.woody .right .fir .ingre > li:nth-child(2) img{
+  margin-left:8px;
+}
+.woody .right .sec .ingre > li:nth-child(1) img{
+  margin-left:8px;
+  margin-top:5px;
+}
+.woody .right .sec .ingre > li:nth-child(2) img{
+  margin-left:8px;
+}
+.woody .right .sec .ingre > li:nth-child(3) img{
+  margin-left:8px;
+}
+.woody .right .thr .ingre > li:nth-child(1) img{
+  margin-left:13px;
+}
+.woody .right .thr .ingre > li:nth-child(2) img{
+  margin-left:12px;
+}
+.woody .right .thr .ingre > li:nth-child(3) img{
+  margin-left:7px;
+}
+/**/
+
+
+/*topBtn (최상단으로 올라가는 버튼)*/
+#topBtn{
+  position:fixed;
+  right:2rem;
+  bottom:1rem;
+  z-index:1000;
+}
+.topBtn{
+  width:50px;
+  height:50px;
+  cursor:pointer;
+  font-size:30px;
+  background-color: transparent;
+  border:1px solid #fff;
+  color:#fff;
+}
+
+
+/*banner_for*/
+.banner_for{
+  min-width:1900px;
+  width:100%;
+  height:440px;
+  display:flex;
+  justify-content: space-around;
+}
+.banner_for .box{
+  width:640px;
+  height:440px;
+  display:flex;
+  background-color: #fff;
+  cursor:pointer;
+  transition:all 0.4s;
+}
+.banner_for .box > li:first-child{
+  width:370px;
+  height:100%;
+  position:relative;
+}
+.banner_for .box > li:last-child{
+  width:270px;
+  height:440px;
+  background-color: #cccac2;
+}
+.banner_for .presentImg{/*이미지 가운데정렬*/
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.banner_for .box .txt{
+  text-align:center;
+  padding:80px 0px;
+  box-sizing: border-box;
+}
+.banner_for a{
+  display:block;
+}
+.banner_for .txt h2{
+  color:#2b261e;
+  font-size:24px;
+  line-height:80px;
+  margin-bottom:40px;
+}
+.banner_for .txt p{
+  color:#3d362e;
+  font-size:17px;
+  line-height:33px;
+}
+.banner_for .box > li:first-child:before{
+  content:'';
+  display:block;
+  width:100%;
+  height:100%;
+  background:radial-gradient(#fff,#fff,#fff,rgb(221, 220, 220),rgb(182, 181, 181));
+  opacity:0;
+  transition:all 0.3s;
+}
+.banner_for .box:hover > li:first-child:before{
+  opacity:1;
+}
+.banner_for .box:hover > li:last-child{
+  background-color: #bbb8af;
+}
+.banner_for .box > li:last-child:hover .txt{
+  text-shadow: 2px 2px 8px #7a7468;
+}
+
+
+/*footer*/
+footer{
+  width:100%;
+  min-width:1900px;
+  height:500px;
+  background-color: #4a4a4a;
+  color:#fff;
+  font-family: "나눔고딕", "Nanum Gothic";
+  font-weight:300;
+}
+footer #wrap{
+  width:1180px;
+  min-width:1180px;
+  height:100%;
+  margin:auto;
+  position:relative;
+}
+footer .help{
+  margin-bottom:15px;
+}
+footer h2{
+  font-family: "조선일보명조", "Chosunilbo_myungjo";
+  font-size:20px;
+  font-weight:500;
+  margin-left:15px;
+  line-height:30px;
+}
+footer .info{
+  display:flex;
+  line-height: 70px;
+  font-size:15px;
+  text-decoration: underline 1px;
+  margin-left:25px;
+}
+footer .info > p:last-child{
+  margin-left:50px;
+}
+footer .helps{
+  display:flex;
+  margin-left:25px;
+  font-size:12px;
+}
+footer .helps .fir{
+  margin-right:230px;
+}
+footer .helps li{
+  line-height:30px;
+}
+footer .help a:hover{
+  text-decoration: underline 1px;
+}
+
+footer .contact{
+  font-size:12px;
+}
+footer .contact > h2{
+  margin-bottom:10px;
+}
+footer .contact > div{
+  margin-left:15px;
+}
+footer .contact p{
+  line-height:23px;
+}
+footer .contact .contacts_fir,
+footer .contact .contacts_thr{
+  display:flex;
+}
+footer .contact .contacts_fir > p:last-child{
+  margin-left:30px;
+}
+footer .contact .contacts_thr > p{
+  margin-right:7px;
+}
+footer .contact a{
+  text-decoration: underline 1px;  
+}
+
+
+footer .sns{
+  position:absolute;
+  right:25px;
+  top:20px;
+  display:flex;
+}
+footer .sns > li{
+  margin-left:40px;
+}
+footer .sns > li:first-child{
+  margin-left:0;
+}

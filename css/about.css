@@ -1,0 +1,117 @@
+/*banner*/
+#banner{
+  min-width:1300px;
+  height:320px;
+  background:linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url(../img/banner.jpg) center/cover; /*그라디언트로도 단색으로 입힐 수 있음*/
+  text-align:center;
+  color:#fff;
+  padding-top:80px;
+  box-sizing: border-box;
+} 
+#banner > h1{
+  font-size:32px;
+  line-height:80px;
+}
+#banner > p{
+  font-size:16px;
+  line-height:26px;
+}
+
+
+/*numbers*/
+#numbers{
+  width:1300px;
+  margin:auto;
+  background-color:#10c9c3;
+  color:#fff;
+  padding:100px 0px;
+  display:flex;
+}
+#numbers > .item{
+  width:25%; /*아 이렇게하면됐었네*/
+  height:40px;
+  border-right:2px solid #fff;
+  box-sizing: border-box;
+  display:flex;
+  justify-content:center; /*flex시 가로가운데정렬) 이거 맨날까먹어서 가운데정렬 못해...왜못해 나*/
+  align-items:center; /*flex시 세로가운데정렬*/
+}
+#numbers > .item:last-child{
+  border-right:0;
+}
+.item > img {
+  margin-right:20px;
+  position:relative;
+  bottom:1px;
+}
+.item > p{
+  font-size:12px;
+  line-height:20px;
+  text-transform:uppercase; /*대문자로 변경*/
+}
+.item > p > b {font-size:16px;}
+
+/*about_me*/
+#about_me{
+  width:1300px;
+  height:520px;
+  margin:auto;
+  background-color: #f5f5f5;
+  display:flex;
+}
+#about_me > div{
+  width:50%;
+  height:520px;
+  padding:120px;
+  box-sizing: border-box;
+}
+#about_me > .largeImg{
+  background:url(../img/about_me.jpg) center/cover;
+}
+#about_me > .txt > h1{
+  font-size:28px;
+  line-height:40px;
+  color:#191919;
+}
+#about_me > .txt > p{
+  font-size : 14px;
+  line-height:20px;
+  color:#787878;
+  margin:20px 0px;  /*이 p태그 마진 다시보자*/
+}
+#about_me .sign{margin-top:30px;} /*위의 20은 상쇄되고 30만 적용됨*/
+
+/*project*/
+#project{
+  width:1300px;
+  margin:auto;
+  height:360px;
+  padding:80px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#project > h1{
+  font-size:28px;
+  color:#191919;
+  line-height:40px;
+}
+#project p{
+  font-size:16px;
+  color:#787878;
+  margin:20px 0px 40px;
+}
+#project a{
+  display:inline-block; /*a태그라서 인라인블럭으로 줘야함*/
+  width:170px;
+  height:50px;
+  border:0; outline:0;
+  background-color: #10c9c3;
+  color:#fff;
+  font-weight:bold;
+  font-size:12px;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+#project a:hover{
+  background-color:#0ab6b1;
+}

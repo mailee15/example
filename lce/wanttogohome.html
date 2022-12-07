@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--폰트어썸 CDN-->
+    <script src="https://kit.fontawesome.com/7b968f109c.js" crossorigin="anonymous"></script>
+    
+    <!--외부정의 css-->
+    <link href="css" rel="stylesheet">
+    
+
+<!--jquery 라이브러리-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<!--jquery UI-->
+<script src="js/jquery-ui.min.js"></script>
+
+<!--외부정의 js-->
+<script src="js/"></script>
+<style>
+  *{margin:0; padding:0;}
+  ul{list-style: none;}
+  a{text-decoration: none; color:inherit;}
+  #to{
+    width:800px;
+    margin:100px auto;
+  }
+  #to .go{
+    width:100%;
+    height:300px;
+    background-color: rgb(147, 147, 204);
+    text-align: center;
+    color:#fff;
+  }
+  #to .go h1{
+    font-size:30px;
+    margin-bottom:30px;
+  }
+  #to .go .home{
+    font-size:18px;
+    margin-bottom:30px;
+  }
+  .now{
+    width:800px;
+    height:400px;
+    margin:auto;
+    background: url(batman_bg.jpeg) center/cover;
+    position:relative;
+    left:50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    cursor:pointer;
+  }
+  .now img{
+    width:300px;
+    position:absolute;
+    bottom:0;
+    left:20px;
+    opacity:0;
+    transition:0.5s;
+  }
+  .now p{
+    font-size:15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff;
+    position:absolute;
+    top:230px;
+    left:250px;
+    opacity:0;
+    transition:0.5s;
+  }
+  /*.on{
+    opacity:1;
+  }*/
+</style>  
+<script>
+  $(function(){
+   $(".now").click(function(){
+      $(".now img, .now p").css("opacity","1").fadeIn("slow");
+      $(".now, .now img").click(function(){
+        $(".now img, .now p").css("opacity","0");
+      })
+    });
+  });
+</script>  
+</head>
+
+
+<body>
+<section id="to">
+  <div class="go">
+    <h1><a href="#">I want to go home<br>right now</a></h1>
+    <div class="home">
+      <p>really really really</p>
+      <p>Ohneul zipjung-do nuhhmoo ando-ego</p>
+      <p>Jincha nanlina teokbokki mukkoshipne</p>
+    </div>
+    <div class="right">
+      <h2><a href="#">I WANT TO</a></h2>
+      <h2><a href="#">MEET YOU</a></h2>
+    </div>
+  </div>
+  <div class="now">
+    <div class="Lego">
+      <img src="batman_lego.png" alt="">
+      <p>와하하<br>나는뱉트만이다</p>
+    </div>
+  </div>
+
+  
+</section>
+
+</body>
+</html>

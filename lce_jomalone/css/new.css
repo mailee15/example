@@ -1,0 +1,679 @@
+/*@font-face*/
+/*나눔고딕*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+/*나눔명조*/
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+/*조선일보명조*/
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*웹폰트 적용 필요*/
+
+
+
+
+/*초기화*/
+*{margin:0; padding:0; box-sizing: border-box;}
+ul{list-style:none;}
+a{text-decoration: none; color:inherit;}
+
+/*전체*/
+
+html{
+  scroll-behavior: smooth;
+}
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+body{
+  font-family: "나눔명조", "Nanum Myeongjo";
+  background-color:#d5d5ce;
+  user-select: none;
+}
+
+/*header*/
+header{
+  width:100%;
+  min-width:1900px;
+  margin:auto;
+}
+header .logo{
+  width:100%;
+  height:120px;
+  text-align: center;
+  position: fixed;
+  display:block;
+  top:0;
+  z-index:100;
+  transition:top 0.2s ease-in-out;
+  background-color:#d5d5ce;
+  box-shadow: 0px 10px 10px -12px #2b261e; /*좌우 상하 blur 그림자크기 컬러. 이중 그림자크기를 마이너스로 주면 아래에만 효과적용 가능*/
+}
+header .nav-up{/*js로 추가될 클래스*/
+  top:-120px;
+}
+header .logo a{
+  display:block;
+  height:120px;
+}
+header .logo img{
+  box-sizing: border-box;
+}
+
+header .gnb{
+  margin-top:120px;
+  background-color: #716b62;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  z-index:99;
+}
+header .gnb h1{
+  font-size:23px;
+  /* hover시  ??? */text-decoration:underline 1px;
+}
+header .gnb a{
+  color:#fff;
+}
+header .gnb a:hover{
+  text-decoration: underline 1px;
+}
+header .gnb h1 a:hover{
+  text-decoration: underline 2px;
+}
+header .gnb .menu{
+  height:80px;
+  display:flex;
+}
+header .gnb .menu li{
+  margin-right:46px;
+  height:80px;
+  line-height:80px;
+}
+header .gnb .shopping .wrap{ /*드롭다운메뉴를 가려줌*/
+  display:none;
+}
+header .gnb .wrap .col{
+  display:flex;
+}
+/*header .gnb .wrap .col li{line-height:80px;} 밑과 중복?*/
+
+header .gnb li h1{
+  padding-left:100px;
+}
+header .gnb .login{
+  display:flex;
+  margin-right:60px;
+}
+header .gnb .login li{
+  margin-left:27px;
+  line-height:80px; /*위와 중복?*/
+  font-size:18px;
+  font-weight:bold;
+}
+header .gnb .login li:last-child{
+  text-decoration: underline 1px;
+}
+header .gnb .login li:last-child:hover{
+  text-decoration:underline 2px;
+}
+header .gnb .wrap{
+  position:absolute;
+  width:100%;
+}
+header .gnb .dropdown{
+  width:100%;
+  background-color:rgba(83,83,80,0.5);
+  left:0;
+}
+
+
+
+#contain{
+  width:1920px;
+  min-width:1900px;
+  margin:0px auto 0px;
+}
+
+/*#pink_bg*/
+#pink_bg{
+  width:1520px;
+  height:3440px;
+  margin:auto;
+  background: url(../img/pink_bg.png) center/cover;
+  font-size:18px;
+  font-weight:500;
+  line-height:30px;
+  font-family: 'Chosunilbo_myungjo';
+  padding-top:230px;
+  padding-bottom:180px;
+  box-sizing: border-box;
+}
+#pink_bg #wrapper{
+  height:3440px; /*>????*/
+}
+#pink_bg #wrap{
+  width:1292px;
+  /*height:800px;*/
+  height:3000px;
+  margin:auto;
+  box-shadow: 10px 10px 15px rgba(176,156,156,0.3),-10px -10px 15px rgba(176,156,156,0.3);;
+}
+#pink_bg .txt{
+  text-shadow: 5px 5px 10px rgba(103,76,76,0.3);
+}
+#pink_bg .bg1{
+  width:100%;
+  background-color:#f8eeec;
+  padding:80px 0px;
+}
+#pink_bg .mainFlower{
+  width:1138px;
+  height:640px;
+  margin:auto;
+  background: url(../img/mainflower.png) center/cover;/*#b37c7c*/
+}
+#pink_bg .mainFlower .hover{ /*hover효과 또는 제이쿼리로 화면 새로고침되면 opacity로 나타나게 효과주기*/
+  width:100%;
+  height:100%;
+  background-color: rgba(179, 124, 124, 0.45);
+  /*opacity:0;*/
+  display:none;
+  position:relative;
+}
+#pink_bg .mainFlower .hover .txt{
+  width:620px;
+  height:380px;
+  font-size:65px;
+  color:#fff;
+  font-family: "Mongolian Baiti";
+  line-height:80px;
+  position:absolute;
+  text-align: right;
+  right:65px; bottom:65px;
+  text-shadow: 5px 5px 10px rgba(144,88,88,0.6);
+
+}
+#pink_bg .mainFlower .hover .txt h1{
+  font-weight:100;
+}
+#pink_bg .mainFlower .hover .txt span{
+  font-size:60px;
+}
+#pink_bg .mainFlower:hover .hover{
+  opacity:0;
+  transition: 1s;
+}
+
+#pink_bg .bg2{
+  width:100%;
+  height:1000px;
+  background-color: #e5d2cd;
+  position:relative;
+  color:#926456;
+}
+.bg2 .contents{
+  width:1180px;
+  height:1300px;
+  margin:auto;
+  position:absolute;
+  top:-150px;
+  z-index:10;
+}
+.bg2 .contents > li{
+  display:flex;
+}
+.bg2 .con1,
+.bg2 .con3{
+  height:500px;
+  position:absolute;
+}
+.bg2 .con1{
+  top:0px;
+  left:185px
+}
+.bg2 .con2{
+  position:absolute;
+  right:80px;
+  top:50%;
+  transform: translateY(-50%);
+}
+.bg2 .con3{
+  bottom:0;
+  left:185px;
+}
+.bg2 .line{
+  width:310px;
+  border-bottom: 2px solid #b7968c;
+}
+.bg2 .con1 .line{
+  height:280px;
+}
+.bg2 .con2 .line{
+  height:216px;
+}
+.bg2 .con3 .line{
+  height:240px;
+}
+.bg2 .con1 .txt{
+  width:260px;
+  margin-top:230px;
+  margin-left:40px;
+}
+.bg2 .con2 .txt{
+  width:255px;
+  height:120px;
+  margin-top:165px;
+  margin-right:40px;
+  text-align:right;
+}
+.bg2 .con3 .txt{
+  width:320px;
+  height:150px;
+  margin-top:165px;
+  margin-left:40px;
+}
+.bg2 .con3 .txt p:first-child
+.bg2 .contents .shadow{
+  box-shadow: 5px 5px 15px rgba(184, 165, 159, 0.6), -5px -5px 15px rgba(184, 165, 159, 0.6);
+  /*filter:drop-shadow(5px 5px 10px rgba(184,165,159,0.6));*/
+  /*.bg2에 그림자 됐었는데 .bg3하던도중 어딘가부터 안됨,,,,,대체왜*/
+}
+
+.bg3{
+  width:100%;
+  height:680px;
+  background: #f4ebea;
+  display:flex;
+  position:relative;
+}
+.bg3 .txtbox{
+  width:500px;
+  height:400px;
+  text-align: right;
+  margin:240px 0px 0px 115px;
+}
+.bg3 .txtbox h2{
+  font-family: "Mongolian Baiti";
+  font-size:52px;
+  font-weight:500;
+  color:#b16868;
+  line-height:60px;
+  text-shadow: 5px 5px 10px rgba(254,252,252 1);
+}
+.bg3 .txtbox h2 span{
+  font-size:55px;
+}
+.bg3 .txtbox .txt{
+  width:345px;
+  color:#b16868;
+  line-height:35px;
+  margin:120px 0px 0px 130px;
+  text-shadow: 5px 5px 10px rgba(103,70,70,0.4);
+}
+.bg3 .imgbox{
+  width:545px;
+  height:700px;
+  background: url(../img/mari.png);
+  position: absolute;
+  right:90px;
+  top:100px;
+  box-shadow: 8px 8px 20px 5px rgba(173,142,134,0.5), -8px -8px 20px 5px rgba(173,142,134,0.8);
+}
+.bg3 .imgbox .mari{
+  width:100%;
+  height:70%;
+  position:absolute;
+  bottom:0;
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.6), rgba(254,254,254,0));
+  opacity:0;
+  transition:0.6s;
+}
+.bg3 .imgbox:hover .mari{
+  opacity:1;
+}
+.bg3 .imgbox .mari .nngt{
+  position: absolute;
+  right:60px;
+  bottom:40px;
+  color:#934f4f;
+  font-size:17px;
+  font-family: "Nanum Gothic", sans-serif; /*왜 이것만 적용안돼........*//*어라갑자기왜돼*/
+  font-weight:bold;
+  text-align: right;
+  text-shadow: 5px 5px 10px rgba(103,70,70,0.3);
+}
+.bg3 .imgbox .mari .more{
+  margin-top:5px;
+  font-family: "맑은 고딕";/*이것도안돼액*//*???갑자기됨 왜지*/
+  font-size:12px;
+  line-height:15px;
+  text-align: right;
+  color:#b37777;
+}
+.bg3 .imgbox .mari .more:hover{
+  color:#a75555;
+  text-decoration: underline 1px;
+}
+
+
+.bg4{
+  width:100%;
+  height:520px;
+  background: #e5d2cd;
+  color:#926456;
+  font-size:17px;
+}
+.bg4 .txt{
+  width:1030px;
+  height:320px;
+  margin:auto;
+  padding:95px 0;
+}
+.bg4 .txt .star1{
+  margin:5px 0px 5px 143px;
+}
+.bg4 .txtunder{
+  display:flex;
+}
+.bg4 .txtunder img{
+  margin:0px 50px 0px 10px;
+}
+
+
+
+/*newItem*/
+#newItem{
+  width:1440px;
+  height:1000px;
+  margin: 240px auto 360px;
+  color:#434343;
+}
+#newItem h2{
+  font-size:40px;
+  font-weight: 300;
+  color:#3d362e;
+  line-height:80px;
+  width:170px;
+  text-align: center;
+}
+#newItem #item_area{
+  width:100%;
+  height:840px;
+  border-top:1px solid #695c4e;
+  border-bottom:1px solid #695c4e;
+}
+#newItem #item_area .items{
+  width:100%;
+  height:760px;
+  display:flex;
+  text-align:center;
+  margin:40px 0 40px 0;
+}
+#newItem #item_area .items > li{
+  width:25%; /*380px*/
+  height:100%; /*760px*/
+  transition:0.6s;
+  overflow: hidden;
+  position:relative;
+  box-sizing: border-box;
+}
+#newItem .items > li img{
+  margin:80px 0px 40px 0px;
+  box-sizing: border-box;
+}
+#newItem .items > li .txt{
+  line-height:25px;
+  font-size:18px;
+  font-weight: 300;
+  transition:0.7s;
+}
+#newItem .items > li:nth-child(2) img,
+#newItem .items > li:nth-child(3) img,
+#newItem .items > li:nth-child(4) img{
+  width:360px;
+}
+#newItem .items .txt p:nth-child(2){
+  margin:15px 0px 0px 0px;
+}
+#newItem .items .txt .price_ml{
+  display:flex;
+  justify-content: center;
+  line-height:80px;
+}
+#newItem .items .txt .price_ml > li:first-child{
+  margin-right:70px;
+}
+#newItem .items > li:hover{
+  background:rgba(178, 145,138,0.4);
+}
+#newItem .items > li:hover .txt{
+  color:#fff;
+  text-shadow: 3px 3px 10px rgba(36,36,36,0.2);
+}
+#newItem .more{
+  line-height: 80px;
+  text-align: right;
+  margin-right:40px;
+  font-size:18px;
+}
+#newItem .more:hover{
+  text-decoration: underline 1px;
+}
+
+
+/*video_area*/
+#video_area{
+  width:1520px;
+  height:1500px;
+  margin:auto;
+}
+#video_area h2{
+  color:#3d362e;
+  font-size:45px;
+  font-weight: 300;
+  line-height:80px;
+  text-align: center;
+  margin-bottom:160px;
+}
+#video_area video{
+  width:100%;
+  display:block;
+  box-shadow: 10px 10px 20px rgba(255,255,255,0.3),-10px -10px 20px rgba(255,255,255,0.3);
+}
+
+
+/*topBtn (최상단으로 올라가는 버튼)*/
+#topBtn{
+  position:fixed;
+  right:2rem;
+  bottom:1rem;
+  z-index:1000;
+}
+.topBtn{
+  width:50px;
+  height:50px;
+  cursor:pointer;
+  font-size:30px;
+  background-color: transparent;
+  border:1px solid #fff;
+  color:#fff;
+}
+
+
+/*banner_for*/
+.banner_for{
+  min-width:1900px;
+  width:100%;
+  height:440px;
+  display:flex;
+  justify-content: space-around;
+}
+.banner_for .box{
+  width:640px;
+  height:440px;
+  display:flex;
+  background-color: #fff;
+  cursor:pointer;
+  transition:all 0.4s;
+}
+.banner_for .box > li:first-child{
+  width:370px;
+  height:100%;
+  position:relative;
+}
+.banner_for .box > li:last-child{
+  width:270px;
+  height:440px;
+  background-color: #cccac2;
+}
+.banner_for .presentImg{/*이미지 가운데정렬*/
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.banner_for .box .txt{
+  text-align:center;
+  padding:80px 0px;
+  box-sizing: border-box;
+}
+.banner_for a{
+  display:block;
+}
+.banner_for .txt h2{
+  color:#2b261e;
+  font-size:24px;
+  line-height:80px;
+  margin-bottom:40px;
+}
+.banner_for .txt p{
+  color:#3d362e;
+  font-size:17px;
+  line-height:33px;
+}
+.banner_for .box > li:first-child:before{
+  content:'';
+  display:block;
+  width:100%;
+  height:100%;
+  background:radial-gradient(#fff,#fff,#fff,rgb(221, 220, 220),rgb(182, 181, 181));
+  opacity:0;
+  transition:all 0.3s;
+}
+.banner_for .box:hover > li:first-child:before{
+  opacity:1;
+}
+.banner_for .box:hover > li:last-child{
+  background-color: #bbb8af;
+}
+.banner_for .box > li:last-child:hover .txt{
+  text-shadow: 2px 2px 8px #7a7468;
+}
+
+
+/*footer*/
+footer{
+  width:100%;
+  min-width:1900px;
+  height:500px;
+  background-color: #4a4a4a;
+  color:#fff;
+  font-family: "나눔고딕", "Nanum Gothic";
+  font-weight:300;
+}
+footer #wrap{
+  width:1180px;
+  min-width:1180px;
+  height:100%;
+  margin:auto;
+  position:relative;
+}
+footer .help{
+  margin-bottom:15px;
+}
+footer h2{
+  font-family: "조선일보명조", "Chosunilbo_myungjo";
+  font-size:20px;
+  font-weight:500;
+  margin-left:15px;
+  line-height:30px;
+}
+footer .info{
+  display:flex;
+  line-height: 70px;
+  font-size:15px;
+  text-decoration: underline 1px;
+  margin-left:25px;
+}
+footer .info > p:last-child{
+  margin-left:50px;
+}
+footer .helps{
+  display:flex;
+  margin-left:25px;
+  font-size:12px;
+}
+footer .helps .fir{
+  margin-right:230px;
+}
+footer .helps li{
+  line-height:30px;
+}
+footer .help a:hover{
+  text-decoration: underline 1px;
+}
+
+footer .contact{
+  font-size:12px;
+}
+footer .contact > h2{
+  margin-bottom:10px;
+}
+footer .contact > div{
+  margin-left:15px;
+}
+footer .contact p{
+  line-height:23px;
+}
+footer .contact .contacts_fir,
+footer .contact .contacts_thr{
+  display:flex;
+}
+footer .contact .contacts_fir > p:last-child{
+  margin-left:30px;
+}
+footer .contact .contacts_thr > p{
+  margin-right:7px;
+}
+footer .contact a{
+  text-decoration: underline 1px;  
+}
+
+
+footer .sns{
+  position:absolute;
+  right:25px;
+  top:20px;
+  display:flex;
+}
+footer .sns > li{
+  margin-left:40px;
+}
+footer .sns > li:first-child{
+  margin-left:0;
+}
