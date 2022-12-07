@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /*카페24 써라운드*/
 @font-face {
   font-family: 'Cafe24Ssurround';
@@ -12,6 +13,14 @@
   font-weight: normal;
   font-style: normal;
 }
+/*카페24 단정해*/
+@font-face {
+  font-family: 'Cafe24Danjunghae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*강원교육튼튼*/
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
@@ -19,11 +28,31 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /*나눔고딕*/
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
 .nanumgothic * {
  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/*나눔스퀘어*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); 
+  /* font-family: 'NanumSquare', sans-serif; */
+
+/*코트라 고딕체*/
+@font-face {
+  font-family: 'KOTRA_GOTHIC';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*LINESeedKR-Bd*/
+@font-face {
+  font-family: 'LINESeedKR-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
 }
 
 
@@ -45,6 +74,7 @@ header{
   line-height:50px;
   position:fixed;
   z-index:2;
+  /* display:none; */
 }
 header .logo{
   width:100px;
@@ -85,6 +115,7 @@ header .gnb > li:hover{
   cursor:pointer;
 }
 header .gnb > li:hover a{
+  display:block;
   box-sizing: border-box;
 }
 header .sub{
@@ -168,6 +199,7 @@ header .search a{
 
 #contain{
   width:85%;
+  max-width:1635px;
   margin-left:15%;
   position:relative;
 }
@@ -188,41 +220,106 @@ header .search a{
   height:100%;
   display:flex;
   justify-content: space-between;
+  position:relative;
+}
+#mainban .mainImgs > li .back1600{
+  display:none;
 }
 #mainban .mainImgs li{
   width:100%;
-  /* min-width:1200px; */
+  max-width:1635px;
   height:100%;
-} 
-#mainban .mainImgs li:nth-child(1){
+  position:relative;
+}
+
+#mainban .mainImgs .fade{
+  animation:fade 1s;
+}
+@keyframes fade{
+  from{opacity:0.3;}
+  to{opacity:1;}
+}
+
+#mainban .mainImgs > li.fir{
   background: url(../img/use/mainSlide_1.png) center/cover;
 }
-#mainban .mainImgs li:nth-child(2){
+#mainban .mainImgs > li.sec{
   background: url(../img/use/mainSlide_2.png) center/cover;
 }
-#mainban .mainImgs li:nth-child(3){
+#mainban .mainImgs > li.thr{
   background: url(../img/use/mainSlide_3.png) center/cover;
 }
-#mainban .mainImgs li:nth-child(4){
+#mainban .mainImgs > li.for{
   background: url(../img/use/mainSlide_4.png) center/cover;
 }
 #mainban .mainImgs .txt{
   position:absolute;
   color:#fff;
-  text-align: right;
-  right:7%;
-  bottom:10%;
+  text-align: left;
+  left:5%;
+  top:22%;
+  font-family: "LINE Seed Sans KR";
+  /* font-family: 'LINESeedKR-Rg'; */
 }
-#mainban .mainImgs .txt > p:first-child{
-  font-family: 'Cafe24Ssurround';
-  font-size:25px;
+#mainban .mainImgs .txt > p.big{
+  font-size:55px;
+  font-weight: 500;
+  color:#000;
+  line-height:73px;
+  background-color: #fff;
+  /* display:inline-block; */
+  display:inline;
+  margin-bottom:10px;
+  padding: 10px 3px 0px 3px;
+  box-sizing: border-box;
+  letter-spacing: 7px;
 }
-#mainban .mainImgs .txt > p:last-child{
-  font-family: 'Cafe24Ssurround';
-  font-size:70px;
-  font-weight: 1000;
-  text-shadow: 5px 5px 5px rgba(255,255,255,0.3);
+#mainban .mainImgs .txt > p.small{
+  margin-top:30px;
+  margin-left:5px;
+  letter-spacing: 2px;
 }
+#mainban .mainImgs .sec .txt > p.small{
+  color:#000;
+}
+#mainban .mainImgs .sec .txt button{
+  color:#444;
+}
+#mainban .mainImgs .sec .txt button:hover{
+  color:#000;
+  background-color: #fff;
+}
+#mainban .mainImgs .txt button{
+  width:150px;
+  height:40px;
+  font-family: 'KOTRA_GOTHIC';
+  font-size:18px;
+  margin-top:55px;
+  margin-left:7px;
+  /* padding:8px 13px; */
+  border:none;
+  border-radius: 13px;
+  background-color: rgba(255,255,255,0.6);
+  cursor:pointer;
+  transform: translate(-5px,-5px);
+  transition:0.3s;
+}
+#mainban .mainImgs .txt button i{
+  vertical-align: middle;
+}
+#mainban .mainImgs .txt button:hover{
+  color:rgb(233, 233, 233);
+  background-color: rgba(255,255,255,0.3);
+}
+#mainban .mainImgs .txt button:hover i{
+  animation: arrowright 0.9s infinite;
+}
+@keyframes arrowright{
+  from{transform: translateX(0px);}
+  to{transform: translateX(5px);}
+}
+
+
 #mainban .sns{
   position:absolute;
   display:flex;
@@ -232,25 +329,35 @@ header .search a{
   justify-content: space-between;
 }
 #mainban .sns > li{
-  opacity:0.9;
+  opacity:0.8;
 }
 #mainban .sns > li:hover{
   opacity:1;
 }
 #mainban .pages{
+  width:90px;
   position:absolute;
   display:flex;
   font-size:25px;
-  bottom:2%;
-  left:2%;
+  bottom:6%;
+  left:3%;
   font-weight:700;
   background-color: rgba(255,255,255,0.5);
   border-radius: 30px;
   padding:2px 7px;
+  justify-content: space-between;
 }
-#mainban .pages li:nth-child(1),
-#mainban .pages li:nth-child(3){
+#mainban .pages li.prev,
+#mainban .pages li.next{
+  opacity:0.6;
   padding-top:7px;
+  cursor:pointer;
+  transition: 0.3s;
+}
+#mainban .pages li.prev:hover,
+#mainban .pages li.next:hover{
+  opacity:1;
+  transform: scale(1.05);
 }
 #mainban .pages .number{
   font-size:30px;
@@ -260,28 +367,32 @@ header .search a{
 #mainban .dots{
   position:absolute;
   display:flex;
-  bottom:5%;
+  bottom:6%;
   right:2%;
 }
 #mainban .dots li{
   width:15px;
   height:15px;
   background-color: transparent;
-  border:1px solid #fff;
+  border:1px solid #333;
   border-radius: 10px;
   margin-right:8px;
   cursor:pointer;
-  transition:0.2s;
+  transition:0.3s;
 }
 #mainban .dots li:last-child{
   margin-right:0px;
 }
 #mainban .dots li:hover{
-  background-color: #fff;
+  background-color: #333;
 }
 #mainban .dots li.on{
-  background-color: #fff;
+  background-color: #333;
 }
+#mainban .dots li.active{
+  background-color: #333;
+}
+
 
 
 
@@ -414,7 +525,7 @@ header .search a{
 }
 
 #fir_nature .right{
-  font-family: 'hy견고딕';
+  font-family: 'NanumSquare', sans-serif;
   width:50%;
   position: relative;
 }
@@ -464,7 +575,7 @@ header .search a{
 }
 #fir_nature .right .green_txt .underline h2{
   position: relative;
-  font-family: '카페24 단정해';
+  font-family: 'Cafe24Danjunghae';
   font-size:45px;
   font-weight: 100;
   letter-spacing: 2px;
@@ -496,7 +607,7 @@ header .search a{
 }
 #fir_nature .right .nature_imgGroup > li:first-child h3{
   font-size:25px;
-  font-family: "강원교육튼튼";
+  font-family: 'GangwonEduPowerExtraBoldA';
   padding:40px 0 30px 0;
 }
 #fir_nature .right .nature_imgGroup > li .back_black h3 span{
@@ -512,9 +623,10 @@ header .search a{
 }
 #fir_nature .right .nature_imgGroup > li:first-child .txt p{
   width:48%;
-  font-size: 15px;
-  line-height:25px;
+  font-size: 16px;
+  line-height:28px;
   margin-top:35px;
+  font-weight: 700;
 }
 #fir_nature .right .nature_imgGroup > li:first-child .txt img{
   width:43%;
@@ -527,6 +639,7 @@ header .search a{
   position:fixed;
   right:1%;
   bottom:2%;
+  display:none;
 }
 .Btn li{
   width:60px;
@@ -625,11 +738,13 @@ footer #copy{
 
 
 
+
 @media (max-width:1600px){
   header{
     width:100%;
     height:80px;
-    position:relative;
+    /* position:fixed; */
+    position: relative;
   }
   header .logo{
     display:none;
@@ -691,22 +806,15 @@ footer #copy{
     width:100%;
     margin:auto;
   }
-  #or{
-    width:20%;
-    margin:2%;
+  #mainban .mainImgs > li{
+    width:100%;
   }
-  #select_area .cir_txt{
-    font-size:14px;
+  #mainban .mainImgs > li .back1600{
+    display:block;
   }
-  #select_area > .pink_left,
-  #select_area > .pink_right{
-    display:none;
+  #mainban .mainImgs > li .back1600 img{
+    width:100%;
   }
-  #select_area .select{
-    width:60%;
-    margin:auto;
-  }
-  .like{display:none;}
 }
 
 
