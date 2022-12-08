@@ -71,6 +71,8 @@ function showSlides(n){
   dots.eq(slideIndex-1).addClass("active");
 }
 
+
+
 //  $(".pages .next").click(Slide);
 //  $(".pages .prev").click(function(){
 //   var last = $(".mainImgs > li:last");
@@ -93,33 +95,7 @@ function showSlides(n){
   });
  });
 
-//  $(".nature_wrap .arrow_btn").click(function(){
-//   if($(".nature_imgGroup").is(":animated")) return false;
-//   var last = $(".nature_imgGroup > li").last();
-//   $(".nature_imgGroup").animated({"left":"0px"},200,function(){
-//     $(this).prepend(last).css("left","-500px");
-//   });
-//  });
 
-
-var natureIndex = 1;
-natureSlide(natureIndex);
-//nature - prev버튼클릭시
-$(".arrow_btn .prev").click(function(){
-  natureSlide(natureIndex -= 1);
-});
-$(".arrow_btn .next").click(function(){
-  natureSlide(natureIndex += 1);
-});
-
-
-
-function natureSlide(n){
-  var slides = $(".nature_imgGroup > li");
-  if(n > slides.length){natureIndex = 1}
-  if(n < 1){natureIndex = slides.length}
-}
-  
 
 
 

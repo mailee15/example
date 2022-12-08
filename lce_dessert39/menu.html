@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>menu_page</title>
+    <title>dessert39_menu_page</title>
     <!--ios 전용 뷰포트-->
     <meta name="viewport" content="width=device-width,initial-scale=1"> 
     <!--폰트어썸 CDN-->
     <script src="https://kit.fontawesome.com/7b968f109c.js" crossorigin="anonymous"></script>
     
     <!--외부정의 css-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
     
     <!--<link rel="icon" type="image/ico" sizes="16*16" href="/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" sizes="16*16" href="/img/favicon.ico">-->
@@ -21,7 +21,7 @@
 <script src="js/jquery-ui.min.js"></script>
 
 <!--외부정의 js-->
-<script src="js/custom.js"></script>
+<script src="js/menu.js"></script>
     
 </head>
 
@@ -83,7 +83,7 @@
 
         
           <div class="search">
-            <input type="text" value="search">
+            <input type="text" name="search" value="SEARCH">
             <a href="#"><img src="img/search_white.png" alt="search" width="23"></a>
           </div>
         </div>
@@ -95,45 +95,88 @@
   <section id="contain">
     <section id="mainban">
       <ul class="mainImgs">
-        <li><!--배경이미지로 넣기-->
+        <li class="fir fade"><!--배경이미지로 넣기-->
+          <div class="back1600">
+            <img src="img/use/mainSlide_1.png">
+          </div>
           <div class="txt">
-            <p></p>
-            <p><b><br><br></b></p>
+            <p class="big">칼로리 걱정 뚝!</p><br>
+            <p class="big">저칼로리 슬림</p><br>
+            <p class="big">티에이드</p>
+            <p class="small">가볍게, 하지만 맛있게</p>
+            <button class="viewmore" type="button">View More
+              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </li>
-        <li><!--배경이미지로 넣기-->
+        <li class="sec fade"><!--배경이미지로 넣기-->
+          <div class="back1600">
+            <img src="img/use/mainSlide_2.png">
+          </div>
           <div class="txt">
-            <p></p>
-            <p><b><br><br></b></p>
+            <p class="big">특별한 날,</p><br>
+            <p class="big">특별한 너를 위해</p><br>
+            <p class="big">'티아라 케이크'</p>
+            <p class="small">DESSERT39에서 특별한 티아라 케이크를 만나보세요</p>
+            <button class="viewmore" type="button">View More
+              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </li>
-        <li><!--배경이미지로 넣기-->
+        <li class="thr fade"><!--배경이미지로 넣기-->
+          <div class="back1600">
+            <img src="img/use/mainSlide_3.png">
+          </div>
           <div class="txt">
-            <p></p>
-            <p><b><br><br></b></p>
+            <p class="big">상콤달콤한</p><br>
+            <p class="big">제주 한라봉이</p><br>
+            <p class="big">디저트39에</p><br>
+            <p class="big">찾아왔수다!</p>
+            <p class="small">DESSERT39에서 제주의 맛을 느껴보세요!</p>
+            <button class="viewmore" type="button">View More
+              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </li>
-        <li><!--배경이미지로 넣기-->
+        <li class="for fade"><!--배경이미지로 넣기-->
+          <div class="back1600">
+            <img src="img/use/mainSlide_4.png">
+          </div>
           <div class="txt">
-            <p></p>
-            <p><b><br><br></b></p>
+            <p class="big">달콤한</p><br>
+            <p class="big">휘낭시에</p><br>
+            <p class="big">6종 출시</p>
+            <p class="small">부드럽고 풍부한 맛을 종류별로!</p>
+            <button class="viewmore" type="button">View More
+              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </li>
       </ul>
       <ul class="sns">
-        <li><a href="#"><img src="img/facebookicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/instagramicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/youtubeicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/naver_icon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/tiktokicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.facebook.com/dessert39"><img src="img/facebookicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.instagram.com/dessert39_official/"><img src="img/instagramicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.youtube.com/@user-mp7nu4vj7q"><img src="img/youtubeicon.png" alt="" width="25"></a></li>
+        <li><a href="https://blog.naver.com/dessertmakers"><img src="img/naver_icon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.tiktok.com/@dessert39_?"><img src="img/tiktokicon.png" alt="" width="25"></a></li>
       </ul>
-      <ul class="pages"><!--이부분 구현 다시고민하기 아무래도 버튼태그로 밖에빼고 ul li 사용하든 해야하는거같은데 아님제이쿼리...-->
-        <li><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
-        <li class="number">1</li>
-        <li><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+      <ul class="pages">
+        <li class="prev">
+          <!-- <i class="fa-solid fa-chevron-left"></i> -->
+          <img src="img/arrow-left.png" alt="" width="30">
+        </li>
+        <!-- <li class="number">1</li> -->
+        <li class="next">
+          <!-- <i class="fa-solid fa-chevron-right"></i> -->
+          <img src="img/arrow-right.png" alt="" width="30">
+        </li>
       </ul>
       <ul class="dots">
-        <li class="on"></li><!--임시-->
+        <li></li>
         <li></li>
         <li></li>
         <li></li>

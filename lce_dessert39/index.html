@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>main_page</title>
+    <title>DESSERT39_Main_page</title>
     <!--ios 전용 뷰포트-->
     <meta name="viewport" content="width=device-width,initial-scale=1"> 
     <!--폰트어썸 CDN-->
@@ -87,7 +87,7 @@
           </ul> -->
         
           <div class="search">
-            <input type="text" value="search">
+            <input type="text" name="search" value="SEARCH">
             <a href="#"><img src="img/search_white.png" alt="search" width="23"></a>
           </div>
         </div>
@@ -162,13 +162,13 @@
         </li>
       </ul>
       <ul class="sns">
-        <li><a href="#"><img src="img/facebookicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/instagramicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/youtubeicon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/naver_icon.png" alt="" width="25"></a></li>
-        <li><a href="#"><img src="img/tiktokicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.facebook.com/dessert39"><img src="img/facebookicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.instagram.com/dessert39_official/"><img src="img/instagramicon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.youtube.com/@user-mp7nu4vj7q"><img src="img/youtubeicon.png" alt="" width="25"></a></li>
+        <li><a href="https://blog.naver.com/dessertmakers"><img src="img/naver_icon.png" alt="" width="25"></a></li>
+        <li><a href="https://www.tiktok.com/@dessert39_?"><img src="img/tiktokicon.png" alt="" width="25"></a></li>
       </ul>
-      <ul class="pages"><!--이부분 구현 다시고민하기 아무래도 버튼태그로 밖에빼고 ul li 사용하든 해야하는거같은데 아님제이쿼리...-->
+      <ul class="pages">
         <li class="prev">
           <!-- <i class="fa-solid fa-chevron-left"></i> -->
           <img src="img/arrow-left.png" alt="" width="30">
@@ -180,7 +180,7 @@
         </li>
       </ul>
       <ul class="dots">
-        <li></li><!--임시-->
+        <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -222,7 +222,7 @@
         </div>
         <div class="nature_wrap">
           <ul class="nature_imgGroup">
-            <li>
+            <li class="fir">
               <div class="back_black">
                 <h3>국내 프랜차이즈 최초 <span>친환경 인증기업</span></h3>
                 <div class="txt">
@@ -231,8 +231,29 @@
                 </div>
               </div>
             </li>
-            <li><!--다음거는 포토샵에서 보고 하기--></li>
-            <li><!--다음거는 포토샵에서 보고 하기--></li>
+            <li class="sec">
+              <div class="back_black">
+                <img src="img/ret_img.png" alt="" width="180">
+                <div class="txt">
+                  <h3>NO! 환경호르몬</h3>
+                  <p>친환경 <span>BPA FREE컵</span></p>
+                  <p><span>자연분해</span> 옥수수 전분<br>빨대 사용</p>
+                </div>
+              </div>
+            </li>
+            <li class="thr">
+              <div class="back_black">
+                <div class="txt">
+                  <p class="danjung">모든 텀블러/리유저블 컵 가져오면</p>
+                  <h3>아메리카노 <span>50% 할인</span></h3>
+                  <p class="beforeSale">2900원</p>
+                  <div class="americanoSale">
+                    <img src="img/scribble_white.png" alt="" width="35" height="35">
+                    <h3>1450<span>원</span></h3>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
           <div class="arrow_btn">
             <button class="prev" type="button"><i class="fa-solid fa-angle-left"></i></button>
@@ -247,7 +268,7 @@
         <div class="title_area">
           <div class="news_title">
             <div class="fir">
-              <h2>DEESERT39</h2>
+              <h2>DESSERT39</h2>
               <div class="pinkUnder"></div>
             </div>
             <div class="sec">
@@ -257,14 +278,27 @@
           </div>
           <p>디저트39를 경험해 본 분들의<br>
           소중한 리뷰 및 새소식을<br>
-          확인해보세요</p>
+          확인해보세요.</p>
           <button class="more" type="button">
             more
-            <img src="img/right.png" alt="">
+            <i class="fa-solid fa-angles-right"></i>
+            <!-- <img src="img/right.png" alt="" width="30"> -->
           </button>
         </div>
         <div class="news_content">
           <!--영역은 3개로 나누고 플렉스 또는 플로트 준 후 모양대로 자른 이미지를 그냥 배치하면 위아래로 됨-->
+          <ul class="news_fir">
+            <li><a href="#"><img src="img/news_img1.png" alt=""></a></li>
+            <li><a href="#"><img src="img/news_img2.png" alt=""></a></li>
+          </ul>
+          <ul class="news_sec">
+            <li><a href="#"><img src="img/news_img3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/news_img4.png" alt=""></a></li>
+          </ul>
+          <ul class="news_thr">
+            <li><a href="#"><img src="img/news_img5.png" alt=""></a></li>
+            <li><a href="#"><img src="img/news_img6.png" alt=""></a></li>
+          </ul>
         </div>
       </section>
 
