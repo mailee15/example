@@ -102,25 +102,48 @@ function showSlides(n){
 //  });
 
 
-var natureIndex = 1;
-natureSlide(natureIndex);
-//nature - prev버튼클릭시
-$(".arrow_btn .prev").click(function(){
-  natureSlide(natureIndex -= 1);
+
+
+// 1.nature - prev버튼클릭시
+$("#fir_nature .arrow_btn .prev").click(function(){
+  $(".nature_imgGroup").prepend($(".nature_imgGroup > li:last"));
 });
-$(".arrow_btn .next").click(function(){
-  natureSlide(natureIndex += 1);
+$("#fir_nature .arrow_btn .next").click(function(){
+  $(".nature_imgGroup").append($(".nature_imgGroup > li:first"));
+});
+
+
+//3. bestseller - dessert/beverage 전환버튼
+$("#thr_bestseller .title_area .btns .btn_des").click(function(){
+  $("#thr_bestseller .title_area .btns .btn_bev").removeClass("on");
+  $("#thr_bestseller .title_area .btns .btn_des").addClass("on");
+  $("#thr_bestseller .bestcontent.bev").css("display","none");
+  $("#thr_bestseller .bestcontent.des").css("display","block");
+});
+$("#thr_bestseller .title_area .btns .btn_bev").click(function(){
+  $("#thr_bestseller .title_area .btns .btn_des").removeClass("on");
+  $("#thr_bestseller .title_area .btns .btn_bev").addClass("on");
+  $("#thr_bestseller .bestcontent.des").css("display","none");
+  $("#thr_bestseller .bestcontent.bev").css("display","block");
 });
 
 
 
-function natureSlide(n){
-  var slides = $(".nature_imgGroup > li");
-  if(n > slides.length){natureIndex = 1}
-  if(n < 1){natureIndex = slides.length}
-}
-  
+//3. bestseller - 좌우버튼 슬라이드 -  1-dessert
+$("#thr_bestseller .des .arrow_btn .prev").click(function(){
+  $(".bestDes").prepend($(".bestDes > li:last"));
+});
+$("#thr_bestseller .des .arrow_btn .next").click(function(){
+  $(".bestDes").append($(".bestDes > li:first"));
+});
 
+//3. bestseller - 좌우버튼 슬라이드 -  2-beverage
+$("#thr_bestseller .bev .arrow_btn .prev").click(function(){
+  $(".bestBev").prepend($(".bestBev > li:last"));
+});
+$("#thr_bestseller .bev .arrow_btn .next").click(function(){
+  $(".bestBev").append($(".bestBev > li:first"));
+});
 
 
 })
