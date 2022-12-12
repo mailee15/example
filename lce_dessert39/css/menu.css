@@ -409,6 +409,7 @@ header .search a{
 }
 
 
+/* 우측하단 top버튼들 */
 .Btn{
   position:fixed;
   right:1%;
@@ -424,6 +425,10 @@ header .search a{
   position: relative;
   background-color: #e7e6e6;
   margin-bottom:10px;
+  cursor:pointer;
+}
+.Btn li button{
+  cursor: pointer;
 }
 .Btn li img{
   width:40px;

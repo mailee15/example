@@ -71,6 +71,8 @@ a{text-decoration: none; color:inherit;}
 
 body{
   z-index:1;
+  user-select: none; 
+  /*텍스트 선택 차단*/
 }
 header{
   width:15%;
@@ -199,6 +201,9 @@ header .search input{
   font-size:18px;
   text-indent: 7px;
 }
+header .search input:focus{
+  outline:none;
+}
 header .search a{
   width:10%;
 }
@@ -220,6 +225,7 @@ header .search a{
 
 #contain{
   width:85%;
+  /* height:100%;      */
   max-width:1635px;
   margin-left:15%;
   position:relative;
@@ -421,10 +427,9 @@ header .search a{
 
 #content_area{
   /* max-width:1260px; */
-  margin:120px auto 0;
-  padding-bottom:280px;
+  margin:200px auto 0;
+  padding-bottom:80px;
 }
-
 
 /* 1 친환경 영역 */
 #content_area #fir_nature{
@@ -950,43 +955,38 @@ header .search a{
   height:840px;
   /* border: 1px solid orange; */
   display: flex;
-  margin-top:80px;
+  margin-top:160px;
 }
 #thr_bestseller .bestMenu_area{
   position: relative;
   width:66.6666%;
   overflow: hidden;
 }
-#thr_bestseller .bestMenu_area > div{
-  /* position: absolute;  이따 줘야함*/
-}
+/* #thr_bestseller .bestMenu_area > div{
+  position: absolute;  
+  이따 줘야함
+} */
 #thr_bestseller .bestcontent{
   width:100%;
   height:100%;
-  /* border: 1px solid red; */
 }
 #thr_bestseller .bestcontent .dessert_area{
   width:100%;
   height:100%;
   position: relative;
-  /* border: 1px solid blue; */
 }
 #thr_bestseller .bestcontent .bestMenu{
   position: absolute;
   /* width:100%; */
-  /* border: 1px solid green; */
   right:0;
   /* left:-602px; */
   display:flex;
 }
 #thr_bestseller .bestcontent .bestMenu > li{
-  /* position: absolute;
-  top:0;
-  right:0; */
   width:280px;
   height:400px;
   background-color: #e7e7e7;
-  /* border:2px solid #e7e7e7; */
+  /* border:3px solid #e7e7e7; */
   border-radius: 50px;
   margin-right:20px;
   margin-top:220px;
@@ -1083,7 +1083,7 @@ header .search a{
 /* 4 스토어 영역*/
 #for_store{
   width:100%;
-  height:680px;
+  height:620px;
   display: flex;
 }
 
@@ -1180,21 +1180,152 @@ header .search a{
   width:100%;
   position: absolute;
   margin-top:110px;
-  color:#555;
+  color:#777;
   font-family: 'NanumSquare', sans-serif;
   font-size:16px;
+  font-weight: 700;
 }
 #for_store .title_area .more_store span{
   text-decoration: underline 1px solid #555;
 }
 
-
-
 #for_store .store_area{
   width:66.6666%;
   height:100%;
-  border:1px solid red;
 }
+#for_store .store_area .map_area{
+  width:700px;
+  height:500px;
+  margin:auto;
+  border: 7px solid #bbb;
+  border-radius: 30px;
+  overflow: hidden;
+}
+#for_store .store_area .root_daum_roughmap{
+  margin:auto;
+}
+
+
+
+/* 5 인테리어 영역*/
+#fif_interior{
+  width:100%;
+  height:800px;
+  /* padding-bottom:80px; */
+  display:flex;
+}
+#fif_interior .interior_area{
+  width:66.6666%;
+  height:100%;
+  margin-top:120px;
+}
+#fif_interior .title_area{
+  width:33.3333%;
+  height:100%;
+  margin-top:120px;
+  padding-top:40px;
+}
+#fif_interior .interior_area .intercontent{
+  width:510px;
+  height:560px;
+  padding-top:20px;
+  border-radius: 250px 250px 0px 0px;
+  margin:auto;
+  position: relative;
+  /* overflow: hidden; */
+}
+#fif_interior .interior_area .intercontent .inter_Group{
+  width:300%;
+  height:100%;
+  /* display: flex; */
+}
+#fif_interior .interior_area .intercontent .grayBox{
+  width:510px;
+  height:560px;
+  background-color: #bbb;
+  border-radius: 250px 250px 0px 0px;
+  position:absolute;
+  top:30px;
+  left:30px;
+  z-index:-1;
+}
+#fif_interior .interior_area .intercontent .inter_Group li{
+  /* width:33.3333%; */
+  width:510px;
+  height:100%;
+  border-radius: 250px 250px 0px 0px;
+  position: absolute;
+  transition:0.4s;
+  /* animation: fadeInOut 3.4s infinite; */
+}
+/* @keyframes fadeInOut{
+  from{opacity:0.4;}
+  to{opacity:1;}
+} */
+#fif_interior .interior_area .intercontent .inter_Group > li.fir{
+  background: url(../img/use/interior_1.jpg) center/cover;
+}
+#fif_interior .interior_area .intercontent .inter_Group > li.sec{
+  background: url(../img/use/interior_2.jpg) center/cover;
+}
+#fif_interior .interior_area .intercontent .inter_Group > li.thr{
+  background: url(../img/use/interior_3.jpg) center/cover;
+}
+#fif_interior .interior_area .intercontent .inter_Group > li:nth-child(1){
+  z-index:15;
+}
+#fif_interior .interior_area .intercontent .inter_Group > li:nth-child(2){
+  z-index:14;
+}
+#fif_interior .interior_area .intercontent .inter_Group > li:nth-child(3){
+  z-index:13;
+}
+#fif_interior .interior_area .intercontent .pot{
+  position: absolute;
+  top:295px;
+  left:320px;
+  z-index: 20;
+}
+
+#fif_interior .title_area{
+  text-align: left;
+  padding-left:40px;
+  z-index: 25;
+}
+#fif_interior .title_area .best_title{
+  /* margin-top:20px; */
+}
+#fif_interior .title_area h2{
+  margin-left:3px;
+}
+#fif_interior .title_area .sec h2{
+  font-size:40px;
+  margin-top:10px;
+}
+#two_five .title_area .inter_title > div.fir,
+#two_five .title_area .inter_title > div.sec{
+  position:relative;
+}
+#two_five .title_area .inter_title > div > .pinkUnder{
+  position:absolute;
+  width:100%;
+  height:17px;
+  background-color: #e3adad;
+  z-index:-1;
+}
+#fif_interior .title_area .inter_title div.fir > .pinkUnder{
+  width:320px;
+  left:0;
+  bottom:12px;
+}
+#fif_interior .title_area .inter_title div.sec > .pinkUnder{
+  width:145px;
+  height:13px;
+  left:0;
+  bottom:10px;
+}
+
+
 
 
 
@@ -1227,6 +1358,10 @@ header .search a{
   position: relative;
   background-color: #e7e6e6;
   margin-bottom:10px;
+  cursor:pointer;
+}
+.Btn li button{
+  cursor: pointer;
 }
 .Btn li img{
   width:40px;
@@ -1240,6 +1375,7 @@ header .search a{
   /* background-color:#ccc; */
   background-color: #fff;
 }
+
 
 
 

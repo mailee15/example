@@ -1,5 +1,11 @@
 $(function(){
 
+  $("#topBtn").click(function(){
+    // window.scrollTo({top:0, behavior:'smooth'});
+    $("html, body").animate({scrollTop:0},400);
+    return false;
+  });
+  
 // 닷버튼 구현 ...근데좀이상
   // $("#mainban .dots > li").click(function mainImgSlide(){
   //   $("#mainban .dots > li").removeClass("on");

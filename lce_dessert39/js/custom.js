@@ -1,5 +1,11 @@
 $(function(){
 
+  $("#topBtn").click(function(){
+    // window.scrollTo({top:0, behavior:'smooth'});
+    $("html, body").animate({scrollTop:0},400);
+    return false;
+  });
+
 // 닷버튼 구현 ...근데좀이상
   // $("#mainban .dots > li").click(function mainImgSlide(){
   //   $("#mainban .dots > li").removeClass("on");
@@ -146,4 +152,35 @@ $("#thr_bestseller .bev .arrow_btn .next").click(function(){
 });
 
 
+
+//5. interior - 이미지목록 fadeIn & fadeOut
+
+// setInterval = (interiorSlide, 1000);
+
+// function interiorSlide(){
+//   $("#fif_interior .inter_Group").prepend($(".inter_Group > li:last"));
+//   $("fif_interior .inter_Group").append($(".inter_Group > li:first"));
+// }
+
+
+// function showSlide(n){
+//   var slides = $(".inter_Group > li");
+
+//   if(n > slides.length){slideIndex = 1}
+//   if(n < 1){slideIndex = slides.length}
+//   slides.css("display","none");
+//   slides.eq(slideIndex-1).css("display","block");
+// }
+
+setInterval(fadeInOut,3000);
+
+function fadeInOut(){
+  $("#fif_interior .inter_Group").prepend($(".inter_Group > li:last").fadeIn());
+  $("fif_interior .inter_Group").append($(".inter_Group > li:first"));
+}
+   
+ 
+  // 
+
+  //   ㅠㅠㅠㅠㅠㅠ
 })

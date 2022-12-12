@@ -87,7 +87,7 @@
           </ul> -->
         
           <div class="search">
-            <input type="text" name="search" value="SEARCH">
+            <input type="text" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'" />
             <a href="#"><img src="img/search_white.png" alt="search" width="23"></a>
           </div>
         </div>
@@ -423,23 +423,77 @@
         </div>
 
         <div class="store_area">
-          <!--지도 넣기-->
-          지도 태그 넣기
-        </div>
+          <div class="map_area">
+            <!--지도 넣기-->
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div id="daumRoughmapContainer1670808049296" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
+            <!--
+              2. 설치 스크립트
+              * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+            -->
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+              new daum.roughmap.Lander({
+                "timestamp" : "1670808049296",
+                "key" : "2cxuz",
+                "mapWidth" : "700",
+                "mapHeight" : "500"
+              }).render();
+            </script>
+          </div>
+        </div>
       </section>
 
-
-      <section id="fif_interior"></section>
       
+
+      <section id="fif_interior">
+        <div class="interior_area">
+          <div class="intercontent">
+            <div class="grayBox"></div>
+            <ul class="inter_Group">
+              <li class="fir"></li>
+              <li class="sec"></li>
+              <li class="thr"></li>
+            </ul>
+            <div class="pot">
+              <img src="img/monsteraPot.png" alt="" height="370">
+            </div>
+          </div>
+        </div>
+
+        <div class="title_area">
+          <div class="inter_title">
+            <div class="fir">
+              <h2>DESSERT39</h2>
+              <div class="pinkUnder"></div>
+            </div>
+            <div class="sec">
+              <h2>Interior</h2>
+              <div class="pinkUnder"></div>
+            </div>
+          </div>
+          <p>디저트 트렌드에 어울리는 디저트30의<br>미니멀&그린 인테리어를 둘러보세요.</p>
+          <button class="more btnpink" type="button">
+            more
+            <i class="fa-solid fa-angles-right"></i>
+            <!-- <img src="img/right.png" alt="" width="30"> -->
+          </button>
+        </div>
+      </section>
+      
+
     </section>
   </section>
 
 
     <ul class="Btn">
-      <li><a href="#"><img src="img/location.png" alt=""></a></li>
+      <li><a href="#for_store"><img src="img/location.png" alt=""></a></li>
       <li><a href="#"><img src="img/phone-call.png" alt=""></a></li>
-      <li><a href="#"><img src="img/uparrow.png" alt=""></a></li>
+      <li><button type="button"  id="topBtn"><img src="img/uparrow.png" alt=""></button></li>
     </ul>
   </section>
 
