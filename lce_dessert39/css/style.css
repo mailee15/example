@@ -150,8 +150,8 @@ header .gnb > li:hover .sub{
   line-height:60px;
 }
 header .gnb > li:hover .sub > li{
-  padding-left:25px;
   line-height:50px;
+  padding-left:25px;
   padding-top:10px;
   box-sizing: border-box;
   z-index:10;
@@ -1329,19 +1329,6 @@ header .search a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 우측하단 top버튼들 */
 .Btn{
   position:fixed;
@@ -1462,6 +1449,12 @@ footer #copy{
     /* position:fixed; */
     position: relative;
   }
+  header .headAll{
+    height:100%;
+  }
+  header .headAll #wrap{
+    height:100%;
+  }
   header .logo{
     display:none;
   }
@@ -1470,11 +1463,16 @@ footer #copy{
   }
   header .logo_sec{
     width:30%;
+    height:80px;
     display:block;
     padding:10px 30px;
     box-sizing: border-box;
   }
+  header .logo_sec img{
+    display: block;
+  }
   header #gnb{
+    height:80px;
     float:right;
     position:absolute;
     right:0;
@@ -1484,6 +1482,7 @@ footer #copy{
   }
   header #gnb .gnb{
     width:100%;
+    height:100%;
     display:flex;
     margin-top:0;
     overflow: visible;
@@ -1491,13 +1490,55 @@ footer #copy{
     margin-right:30px;/**/
   }
   header .gnb > li{
-    line-height:80px;
-    padding:0 10px;
+    height:80px;
+    padding:15px 25px 0px 25px;
     margin:0;
+    position:relative;
+  }
+  header .gnb > li a{
+    display: block;
   }
   header .gnb > li:hover{
-    padding:0;
-    margin:0;
+    /* padding:0; */
+    /* margin:0; */
+    height:100%;
+    border-radius: 0px;
+    background-color: #fff;
+  }
+  header .gnb > li:hover .sub > li{
+    padding:10px 10px 0px 10px;
+    border-radius:0;
+  }
+  header .gnb > li .sub{
+    width:160px;
+    position: absolute;
+    top:80px;
+    left:0;
+    border-radius: 0px 0px 30px 30px;
+    box-sizing: border-box;
+    display:block;
+  }
+  header .gnb > li:nth-child(3) .sub{
+    top:80px;
+  }
+  header .gnb > li:nth-child(4) .sub{
+    top:80px;
+  }
+  header .gnb > li .sub > li{
+    line-height:50px;
+    padding:10px 15px 0px 15px;
+    box-sizing: border-box;
+  }
+  header .gnb > li .sub > li:hover{
+    line-height:50px;
+    padding:10px 15px 0px 15px;
+    box-sizing: border-box;
+  }
+  header .gnb > li .sub > li:first-child:hover{
+    border-radius: 0px 0px 0px 0px;
+  }
+  header .gnb > li .sub > li:last-child:hover{
+    border-radius: 0px 0px 30px 30px;
   }
   header input{
     display:none;
