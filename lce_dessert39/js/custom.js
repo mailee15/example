@@ -183,4 +183,24 @@ function fadeInOut(){
   // 
 
   //   ㅠㅠㅠㅠㅠㅠ
+
+
+  // max-width:1050px시
+  // 메뉴 토글버튼 슬라이드업다운
+  $(".headAll .toggle").click(function(){
+    $(".headAll .gnb").stop().slideToggle("fast");
+  });
+
+ //메뉴 토글버튼 > .sub 아코디언메뉴
+  // $("#gnb .gnb > li").click(function(){
+  //   $(this).children().slideToggle("fast");
+  // })
+
+  // $(".gnb > li > a").click(function(){
+  //   console.log($(this).next().css("display"))
+  //   if($(this).next(".sub").css("display") == "none"){
+  //     $(".sub").slideUp();
+  //   }
+  //   $(this).next().slideDown();
+  // })
 })
