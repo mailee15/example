@@ -50,22 +50,11 @@
                 <li><a href="#">본사</a></li>
                 <li><a href="#">오시는길</a></li>
               </ul>
-              <ul class="subsec">
-                <li><a href="#">소개</a></li>
-                <li><a href="#">BI</a></li>
-                <li><a href="#">본사</a></li>
-                <li><a href="#">오시는길</a></li>
-              </ul>
             </li>
-            <li><a href="menu.html">MENU</a>
+            <li><a href="#">MENU</a>
               <ul class="sub">
-                <li><a href="menu.html">디저트</a></li>
-                <li><a href="menu.html">커피 & 음료</a></li>
-                <li><a href="#">삼구 수제 도넛</a></li>
-              </ul>
-              <ul class="subsec">
-                <li><a href="menu.html">디저트</a></li>
-                <li><a href="menu.html">커피 & 음료</a></li>
+                <li><a href="#">디저트</a></li>
+                <li><a href="#">커피 & 음료</a></li>
                 <li><a href="#">삼구 수제 도넛</a></li>
               </ul>
             </li>
@@ -91,10 +80,8 @@
               </ul>
             </li>
           </ul>
-
-        
           <div class="search">
-            <input type="text" name="search" value="SEARCH">
+            <input type="text" name="search" placeholder="SEARCH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'SEARCH'" />
             <a href="#"><img src="img/search_white.png" alt="search" width="23"></a>
           </div>
         </div>
@@ -194,10 +181,12 @@
       </ul>
     </section>
 
+
+
     <div id="wrapper">
       <div id="or">
         <div class="or"><!--배경으로 슬래쉬이미지-->
-          <div class="des">
+          <div class="des on">
             <a href="#">
               <img src="img/piece-of-cake.png" alt="" width="50">
               <p>디저트</p>
@@ -230,14 +219,42 @@
             </a></li>
             <li><a href="#">
               <p class="circle"><img src="img/macaron.png" alt="" width="80"></p>
-              <span class="cir_txt">마카롱<br>/오믈렛</span>
+              <span class="cir_txt">마카롱/오믈렛</span>
             </a></li>
             <li><a href="#">
               <p class="circle"><img src="img/cookie.png" alt="" width="80"></p>
               <span class="cir_txt">쿠키/파이</span>
             </a></li>
             <li><a href="#">
-              <p class="circle"><img src="img/dokyoroll.png" alt="" width="80"></p>
+              <p class="circle"><img src="img/dokyoroll_whitechoco.png" alt="" width="80"></p>
+              <span class="cir_txt">도쿄롤</span>
+            </a></li>
+          </ul>
+        </div>
+        <div class="sel_sec">
+          <ul class="select">
+            <li><a href="#">
+              <p class="circle"><img src="img/french_cookiechoux_milk.png" alt="" width="80"></p>
+              <span class="cir_txt">베이커리</span>
+            </a></li>
+            <li><a href="#">
+              <p class="circle"><img src="img/cake.png" alt="" width="80"></p>
+              <span class="cir_txt">케이크</span>
+            </a></li>
+            <li><a href="#">
+              <p class="circle"><img src="img/parfait.png" alt="" width="80"></p>
+              <span class="cir_txt">빙수/파르페</span>
+            </a></li>
+            <li><a href="#">
+              <p class="circle"><img src="img/macaron.png" alt="" width="80"></p>
+              <span class="cir_txt">마카롱/오믈렛</span>
+            </a></li>
+            <li><a href="#">
+              <p class="circle"><img src="img/cookie.png" alt="" width="80"></p>
+              <span class="cir_txt">쿠키/파이</span>
+            </a></li>
+            <li><a href="#">
+              <p class="circle"><img src="img/dokyoroll_whitechoco.png" alt="" width="80"></p>
               <span class="cir_txt">도쿄롤</span>
             </a></li>
           </ul>
@@ -245,6 +262,9 @@
         <div class="pink_right"></div>
       </div>
     </div>
+    <!--설명글-->
+    <p class="lce">제일 줄어들었을때 sel_sec 부분 슬라이드바로 넘기거나 좌우화살표로 넘기게 만들기</p>
+    <!--설명글-->
 
     <div id="content_area">
       <ul id="content">
@@ -258,11 +278,13 @@
             <p class="price">3,500원</p>
           </a></div>
           <span class="best">Best!</span>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <!-- <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span> -->
+          <span class="like on"><img src="img/love.png" alt="" width="25"></span>
+          <span class="like_red on"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/vanilla_donut.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>완전 맛있는 바닐라 도넛</h3>
@@ -270,11 +292,12 @@
             <p class="price">3,500원</p>
           </a></div>
           <span class="best">New!</span>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/redbean_donut.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>순수우유 팥 도넛</h3>
@@ -282,11 +305,12 @@
             <p class="price">3,500원</p>
           </a></div>
           <span class="best">New!</span>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/milk_donut.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>순수우유 도넛</h3>
@@ -294,88 +318,96 @@
             <p class="price">3,500원</p>
           </a></div>
           <span class="best">New!</span>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/marble_cheeze_brownie.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>마블 치즈 브라우니</h3>
             <p>이탈리아 고급 리얼 초콜릿과 크림치즈의<br>부드러운 조화가 일품인 영국식 디저트입니다.</p>
             <p class="price">5,800원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/walnut_brownie.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>월넛 브라우니</h3>
             <p>미국 대표 디저트 중 하나. 두꺼우면서 부드러운<br>식감을 가지고 있으며 진한 초콜릿 향과…</p>
             <p class="price">5,900원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/kayajam_croissant.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>카야잼 크루아상</h3>
             <p>고소하고 달콤한 코코넛을 올려 구운 크루아상<br>속에 코코넛 밀크를 넣어 만든 부드럽고 달콤한…</p>
             <p class="price">5,600원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/chocolate_croissant.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>초코 크루아상</h3>
             <p>특수 제작된 양질의 초콜릿과 바삭바삭한<br>크루아상의 조화가 인상깊은 초코크로입니다…</p>
             <p class="price">4,800원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/blueberry_cheezecake.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>프렌치 블루베리 치즈케익(조각)</h3>
             <p>진한 농도의 치즈케익과 블루베리의 상큼함의 조화가<br>인상적인 블루베리 치즈케익입니다…</p>
             <p class="price">6,800원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/caramel_cheezecake.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>리얼 카라멜 치즈케익(조각)</h3>
             <p>수제 카라멜을 토핑한 부드러운 케익 시트와<br>최고급 크림치즈가 어우러져 진한 달콤함을…</p>
             <p class="price">6,800원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/brownie_icecream.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>브라우니 아이스크림</h3>
             <p>달콤한 아이스크림과 진한 초콜릿 브라우니의<br>환상적인 조화에 아몬드를 더해 식감까지…</p>
             <p class="price">6,900원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/corn_addicted_bread.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>옥수수 중독빵</h3>
@@ -383,51 +415,56 @@
             <p class="price">2,900원</p>
           </a></div>
           <span class="best">Best!</span>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/french_cookiechoux_milk.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>프렌치 쿠키슈(순수 우유 크림)</h3>
             <p>달지않고 담백한 우유크림이 가득 들어있는 쿠키슈<br>입니다. 부드러운 우유크림과 바삭한 쿠키슈의…</p>
-            <p class="price">3,500원</p>
+            <p class="price">4,200원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/french_cookiechoux_custard.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>프렌치 쿠키슈(완전 커스터드)</h3>
             <p>달지않고 담백한 커스터드크림이 가득 들어있는<br>쿠키슈입니다. 부드러운 커스터드크림과…</p>
             <p class="price">4,200원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png" alt="" width="240">
+            <img src="img/french_cookiechoux_creamcheeze.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
             <h3>프렌치 쿠키슈(밀크 크림치즈)</h3>
             <p>진한 치즈크림이 가득 들어있는 쿠키슈입니다.<br>풍미가 깊은 호주산 크림치즈와 바삭한…</p>
             <p class="price">4,200원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
         <li>
           <div class="item"><a href="#">
-            <img src="img/caramel_donut.png " alt="" width="240">
+            <img src="img/french_cookiechoux_chocolat.png" alt="" width="240">
           </a></div>
           <div class="txt"><a href="#"><!--a태그 블럭주기-->
-            <h3>완전 진한 카라멜 도넛</h3>
+            <h3>프렌치 쿠키슈(밀크쇼콜라)</h3>
             <p>우유크림과 생초코가 조화를 이루어 속을 가득 채운<br>쿠키슈입니다. 달지않고 담백한 우유크림과…</p>
             <p class="price">4,200원</p>
           </a></div>
-          <span class="like"><a href="#"><img src="img/like.png" alt="" width="25"></a></span>
+          <span class="like"><img src="img/love.png" alt="" width="24"></span>
+          <span class="like_red"><img src="img/heart.png" alt="" width="25"></span>
         </li>
       </ul>
     </div>

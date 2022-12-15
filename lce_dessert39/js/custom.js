@@ -26,6 +26,7 @@ $(function(){
 //     $(this).append(now).css("left","0px");
 //   });
 //  },5000);
+
  var slideIndex = 1;  // 변수선언 먼저! 그 다음에 함수
  showSlides(slideIndex);
  //5초에 한번씩 Slide 함수 실행
@@ -203,4 +204,13 @@ function fadeInOut(){
   //   }
   //   $(this).next().slideDown();
   // })
+
+  $(window).resize(function(){
+    var winWd = $(window).width();
+    if(winWd >= 1050){
+      $(".headAll .gnb").css("display","flex");
+    }else{
+      $(".headAll .gnb").css("display","none");
+    }
+  });
 })

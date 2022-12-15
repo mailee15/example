@@ -6,26 +6,7 @@ $(function(){
     return false;
   });
   
-// 닷버튼 구현 ...근데좀이상
-  // $("#mainban .dots > li").click(function mainImgSlide(){
-  //   $("#mainban .dots > li").removeClass("on");
-  //   $(this).addClass("on");
 
-  //   var i = $(this).index();
-  //   var pos = i*-1635;
-  //   $("#mainban .mainImgs").stop().animate({"left":pos+"px"},1000,"easeInCubic");
-  // });
-
-
-  //메인 슬라이드 구현
-  //ul위치인 .mainImgs에 position:relative 주면 슬라이드되듯 넘어감!
-
-//   setInterval(function(){
-//   var now = $(".mainImgs > li").first();
-//   $(".mainImgs").animate({"left":"-1635px"},1000,function(){
-//     $(this).append(now).css("left","0px");
-//   });
-//  },5000);
  var slideIndex = 1;  // 변수선언 먼저! 그 다음에 함수
  showSlides(slideIndex);
  //5초에 한번씩 Slide 함수 실행
@@ -102,7 +83,31 @@ function showSlides(n){
  });
 
 
+// max-width:1050px시
+  // 메뉴 토글버튼 슬라이드업다운
+  $(".headAll .toggle").click(function(){
+    $(".headAll .gnb").stop().slideToggle("fast");
+  });
 
+ $(window).resize(function(){
+    var winWd = $(window).width();
+    if(winWd >= 1050){
+      $(".headAll .gnb").css("display","flex");
+    }else{
+      $(".headAll .gnb").css("display","none");
+    }
+  });
+
+
+  
+  $("#content > li .like").click(function(){
+    $(this).css("display","none");
+    $(this).next().toggle();
+  });
+  $("#content > li .like_red").click(function(){
+    $(this).css("display","none");
+    $(this).prev().css("display","block");
+  });
 
 
 })
