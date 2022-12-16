@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/7b968f109c.js" crossorigin="anonymous"></script>
     
     <!--외부정의 css-->
-    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/menu_dessert.css" rel="stylesheet">
     
     <!--<link rel="icon" type="image/ico" sizes="16*16" href="/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" sizes="16*16" href="/img/favicon.ico">-->
@@ -21,13 +21,14 @@
 <script src="js/jquery-ui.min.js"></script>
 
 <!--외부정의 js-->
-<script src="js/menu.js"></script>
-    
+<script src="js/menu_dessert.js"></script>
+
 </head>
 
 
+<body style="overflow-x:hidden">
+  <!--x축에 생기는 불필요한 스크롤바 제거-->
 
-<body>
   <header>
      <!--header 영역 -->
     <div class="headAll">
@@ -54,7 +55,7 @@
             <li><a href="#">MENU</a>
               <ul class="sub">
                 <li><a href="#">디저트</a></li>
-                <li><a href="#">커피 & 음료</a></li>
+                <li><a href="menu_drink.html">커피 & 음료</a></li>
                 <li><a href="#">삼구 수제 도넛</a></li>
               </ul>
             </li>
@@ -91,97 +92,12 @@
 
 
   <section id="contain">
-    <section id="mainban"  style="display:none">
-      <ul class="mainImgs">
-        <li class="fir fade"><!--배경이미지로 넣기-->
-          <div class="back1600">
-            <img src="img/use/mainSlide_1.png" alt="">
-          </div>
-          <div class="txt">
-            <p class="big">칼로리 걱정 뚝!</p><br>
-            <p class="big">저칼로리 슬림</p><br>
-            <p class="big">티에이드</p>
-            <p class="small">가볍게, 하지만 맛있게</p>
-            <button class="viewmore" type="button">View More
-              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </li>
-        <li class="sec fade"><!--배경이미지로 넣기-->
-          <div class="back1600">
-            <img src="img/use/mainSlide_2.png" alt="">
-          </div>
-          <div class="txt">
-            <p class="big">특별한 날,</p><br>
-            <p class="big">특별한 너를 위해</p><br>
-            <p class="big">'티아라 케이크'</p>
-            <p class="small">DESSERT39에서 특별한 티아라 케이크를 만나보세요</p>
-            <button class="viewmore" type="button">View More
-              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </li>
-        <li class="thr fade"><!--배경이미지로 넣기-->
-          <div class="back1600">
-            <img src="img/use/mainSlide_3.png" alt="">
-          </div>
-          <div class="txt">
-            <p class="big">상콤달콤한</p><br>
-            <p class="big">제주 한라봉이</p><br>
-            <p class="big">디저트39에</p><br>
-            <p class="big">찾아왔수다!</p>
-            <p class="small">DESSERT39에서 제주의 맛을 느껴보세요!</p>
-            <button class="viewmore" type="button">View More
-              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </li>
-        <li class="for fade"><!--배경이미지로 넣기-->
-          <div class="back1600">
-            <img src="img/use/mainSlide_4.png" alt="">
-          </div>
-          <div class="txt">
-            <p class="big">달콤한</p><br>
-            <p class="big">휘낭시에</p><br>
-            <p class="big">6종 출시</p>
-            <p class="small">부드럽고 풍부한 맛을 종류별로!</p>
-            <button class="viewmore" type="button">View More
-              <!-- <img src="img/right-arrow.png" alt="" width="30"> -->
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </li>
-      </ul>
-      <ul class="sns">
-        <li><a href="https://www.facebook.com/dessert39"><img src="img/facebookicon.png" alt="" width="25"></a></li>
-        <li><a href="https://www.instagram.com/dessert39_official/"><img src="img/instagramicon.png" alt="" width="25"></a></li>
-        <li><a href="https://www.youtube.com/@user-mp7nu4vj7q"><img src="img/youtubeicon.png" alt="" width="25"></a></li>
-        <li><a href="https://blog.naver.com/dessertmakers"><img src="img/naver_icon.png" alt="" width="25"></a></li>
-        <li><a href="https://www.tiktok.com/@dessert39_?"><img src="img/tiktokicon.png" alt="" width="25"></a></li>
-      </ul>
-      <ul class="pages">
-        <li class="prev">
-          <!-- <i class="fa-solid fa-chevron-left"></i> -->
-          <img src="img/arrow-left.png" alt="" width="30">
-        </li>
-        <!-- <li class="number">1</li> -->
-        <li class="next">
-          <!-- <i class="fa-solid fa-chevron-right"></i> -->
-          <img src="img/arrow-right.png" alt="" width="30">
-        </li>
-      </ul>
-      <ul class="dots">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+
+    <section id="pageTitle">
+      <div>
+        <h1>Desserts</h1>
+      </div>
     </section>
-
-
 
     <div id="wrapper">
       <div id="or">
@@ -193,7 +109,7 @@
             </a>
           </div>
           <div class="dri">
-            <a href="#">
+            <a href="menu_drink.html">
               <img src="img/orange-juice.png" alt="" width="50">
               <p>커피 &#47; 음료</p>
             </a>
@@ -259,12 +175,12 @@
             </a></li>
           </ul>
         </div>
+        <div class="menu_scrollBar">
+          <div class="bar"></div>
+        </div>
         <div class="pink_right"></div>
       </div>
     </div>
-    <!--설명글
-    <p class="lce">제일 줄어들었을때 sel_sec 부분 슬라이드바로 넘기거나 좌우화살표로 넘기게 만들기</p>
-    설명글-->
 
     <div id="content_area">
       <ul id="content">
