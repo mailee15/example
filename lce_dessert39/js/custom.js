@@ -205,12 +205,33 @@ function fadeInOut(){
   //   $(this).next().slideDown();
   // })
 
+
+  //윈도우크기 줄어들면 gnb메뉴가 flex되어 상단표출
   $(window).resize(function(){
     var winWd = $(window).width();
     if(winWd >= 1050){
       $(".headAll .gnb").css("display","flex");
     }else{
       $(".headAll .gnb").css("display","none");
+    }
+  });
+
+  //윈도우크기 줄어들면 타이틀/컨텐츠 순서 바꾸기.
+  $(window).resize(function(){
+    var winWd = $(window).width();
+    if(winWd >= 1220){
+      $("#thr_bestseller .title_area").insertAfter("#thr_bestseller .bestMenu_area");
+    }else{
+      $("#thr_bestseller .bestMenu_area").insertAfter("#thr_bestseller .title_area");
+    }
+  });
+
+  $(window).resize(function(){
+    var winWd = $(window).width();
+    if(winWd >= 1200){
+      $("#fif_interior .title_area").insertAfter("#fif_interior .interior_area");
+    }else{
+      $("#fif_interior .interior_area").insertAfter("#fif_interior .title_area");
     }
   });
 })
