@@ -917,9 +917,9 @@ header .search a{
   flex-direction: column;
   justify-content: space-between;
 }
-#sec_news .news_content > ul:last-child{
+/* #sec_news .news_content > ul:last-child{
   padding-right:0;
-}
+} */
 #sec_news .news_content > ul > li:first-child{
   margin-bottom:10px;
 }
@@ -1457,6 +1457,11 @@ footer #copy{
   header .headAll{
     height:100%;
   }
+  /**/
+  header .headAll .search_icon > i{
+    max-height:20px;
+  }
+  /**/
   header .headAll #wrap{
     height:100%;
   }
@@ -1694,9 +1699,17 @@ footer #copy{
   #two_five .title_area .pinkUnder{
     left:0;
   }
+  #two_five > #sec_news{
+    padding-top:0;
+  }
+  #two_five > #sec_news .news_content{
+    height:auto;
+  }
   #thr_bestseller .bestMenu_area{
-    /* margin:auto; */
-    height:500px;
+    height:450px;
+  }
+  #two_five > #thr_bestseller > .title_area{
+    margin:0px auto 100px;
   }
   #thr_bestseller .bestMenu_area .bestMenu > li{
     width:100%;
@@ -1715,6 +1728,32 @@ footer #copy{
   #thr_bestseller .bestMenu_area .arrow_btn{
     top:0px;
     left:15%;
+  }
+  #two_five > #for_store{
+    padding-top:100px;
+  }
+  #two_five > #for_store .title_area{
+    height:300px;
+  }
+  #two_five > #for_store .title_area .searchBox{
+    position:static;
+    margin-top:80px;
+    width:80%;
+  }
+  #two_five > #for_store .title_area .searchBox input{
+    text-align: left;
+    width:100%;
+    background-color: transparent;
+  }
+  #two_five > #for_store .title_area .searchBox .more_store{
+    left:10px;
+  }
+  #two_five > #fif_interior{
+    padding-top:150px;
+  }
+  #two_five > #fif_interior .interior_area{
+    margin-top:0;
+    margin-bottom:100px;
   }
 
 
@@ -1805,6 +1844,9 @@ footer #copy{
   #two_five .title_area .pinkUnder{
     left:0;
   } */
+  #thr_bestseller .bestMenu_area{
+    height:400px;
+  }
   #thr_bestseller .bestcontent .arrow_btn > button{
     width:50px;
     height:50px;
@@ -1815,13 +1857,16 @@ footer #copy{
   #for_store .title_area .searchBox{
     position:static;
   }
+  #for_store .title_area .searchBox input{
+    background-color: transparent;
+    font-size:0.9em;
+  }
   #for_store .title_area .searchBox .more_store{
-    position: static;
+    /* position: static; */
   }
-  #for_store 
-  #for_store .store_area{
+  /* #for_store .store_area{
     width:80%;
-  }
+  } */
   #for_store .store_area .map_area{
     width:100%;
     max-height:500px;
@@ -1851,29 +1896,12 @@ footer #copy{
     width:100%;
     justify-content: center;
   }
-  /* #contain #wrapper #or .or{
-    background-image:none;
-    font-size:12px;
-    position:absolute;
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu h4{
+    font-size:80%;
   }
-  #contain #wrapper #or .or > div{
-    width:60px;
-    height:60px;
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li:last-child h4{
+    font-size:100%;
   }
-  #contain #wrapper #or .or .des{
-    top:0;
-    left:0px;
-  }
-  #contain #wrapper #or .or .dri{
-    top:0;
-    right:-40px;
-  } 
-  #contain #wrapper #or .or > div a{
-    width:100%;
-  } 
-  #contain #wrapper #select_area .select{
-    margin-top:40px;
-  } */
 }
 
 
@@ -1881,6 +1909,18 @@ footer #copy{
   /* #contain #wrapper #or .or{
     display:none;
   } */
+  #thr_bestseller .bestMenu_area{
+    height:300px;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu h4{
+    font-size:80%;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li:last-child h4{
+    font-size:100%;
+  }
+  #for_store .title_area .searchBox input{
+    font-size:0.8em;
+  }
   #fif_interior .interior_area .intercontent{
     width:100%;
   }
@@ -1904,9 +1944,6 @@ footer #copy{
     width:100%;
     background: url(../img/Dbanner_01.jpg) center/cover no-repeat;
   }
-  /* #or{
-    display:none;
-  } */
   #content > li{
     padding:20px;
     width:50%;
@@ -1930,10 +1967,27 @@ footer #copy{
     width:16.6%;
   } */
   .search img{display:none;}
-
+  #two_five > #sec_news .news_content > ul{
+    width:100%;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li h4{
+    margin-bottom:20px;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu h4{
+    font-size:60%;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li:last-child h4{
+    font-size:80%;
+  }
   #thr_bestseller .bestcontent .arrow_btn > button{
     width:40px;
     height:40px;
+  }
+  #for_store .store_area{
+    height:auto;
+  }
+  #for_store .title_area .searchBox input::placeholder{
+   color:transparent;
   }
 
   footer{
@@ -1957,6 +2011,37 @@ footer #copy{
 
 
 @media (max-width:620px){
+  /* #two_five > #sec_news .news_content > ul > li */
+  #two_five > #sec_news .news_content{
+    display:block;
+    width:100%;
+  }
+  #two_five > #sec_news .news_content > ul > li{
+    max-width:300px;
+    margin:10px auto 10px;
+  }
+  #two_five > #sec_news .news_content{
+    margin:auto;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li{
+    height:auto;
+    /* height:300px; */
+    padding-bottom:20px;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li h4{
+    font-size:20%;
+    margin-bottom:10px;
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li h4.one_rows{
+    /* display:none; */
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li .two_rows{
+    display:block;
+    /* margin-top:0; */
+  }
+  #thr_bestseller .bestMenu_area .bestcontent .bestMenu > li:last-child h4{
+    font-size:100%;
+  }
   #thr_bestseller .bestcontent .arrow_btn > button{
     width:30px;
     height:30px;
@@ -1967,8 +2052,18 @@ footer #copy{
 }
 
 
-
+/* 여기서부터 모바일 */
 @media (max-width:480px){
+  header .headAll > a > i{
+    font-size:30px;
+  }
+  header .headAll .search_icon{
+    right:70px;
+  }
+  header .headAll .search_icon > i{
+    font-size:29px;
+  }
+
   #content > li{
     padding:30px;
     width:100%;
@@ -1989,5 +2084,10 @@ footer #copy{
   #contain #content_area  #content > li .txt .price{
     font-size:16px;
   }
+}
+
+
+@media (max-width:360px){
+
 }
 
