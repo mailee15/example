@@ -216,9 +216,12 @@ function fadeInOut(){
     }
   });
 
-  //윈도우크기 줄어들면 (=1200이 되면) 타이틀/컨텐츠 순서 바꾸기.
+
+  //윈도우크기 줄어들면 (=1200이하)  (3,5영역)타이틀/컨텐츠 순서 바꾸기.
+  var winWd = $(window).width();
+
   $(window).resize(function(){
-    var winWd = $(window).width();
+    // var winWd = $(window).width();
     if(winWd >= 1184){
       $("#thr_bestseller .title_area").insertAfter("#thr_bestseller .bestMenu_area");
     }else{
@@ -227,11 +230,50 @@ function fadeInOut(){
   });
 
   $(window).resize(function(){
-    var winWd = $(window).width();
+    // var winWd = $(window).width();
     if(winWd >= 1184){
       $("#fif_interior .title_area").insertAfter("#fif_interior .interior_area");
     }else{
       $("#fif_interior .interior_area").insertAfter("#fif_interior .title_area");
     }
   });
+
+  //화면 처음 실행시 1200px(실제 1184px)이하이면
+  //윈도우크기 변경 없어도 (3,5영역)타이틀/컨텐츠 순서 바꾸기.
+  if(winWd >= 1184){
+    $("#thr_bestseller .title_area").insertAfter("#thr_bestseller .bestMenu_area");
+    $("#fif_interior .title_area").insertAfter("#fif_interior .interior_area");
+    }else{
+    $("#thr_bestseller .bestMenu_area").insertAfter("#thr_bestseller .title_area");
+    $("#fif_interior .interior_area").insertAfter("#fif_interior .title_area");
+  }
+
+  //혼자 해본것
+  // var winWd = $(window).width();
+
+  // function resizethr(){
+  //   if(winWd >= 1184){
+  //     $("#thr_bestseller .title_area").insertAfter("#thr_bestseller .bestMenu_area");
+  //   }else{
+  //     $("#thr_bestseller .bestMenu_area").insertAfter("#thr_bestseller .title_area");
+  //  }
+  // };
+
+  // function resizefif(){
+  //   if(winWd >= 1184){
+  //     $("#fif_interior .title_area").insertAfter("#fif_interior .interior_area");
+  //   }else{
+  //     $("#fif_interior .interior_area").insertAfter("#fif_interior .title_area");
+  //   }
+  // }
+
+  // location.reload(
+  //   resizethr();
+  //   resizefif();
+  // )
+
+  // $(window).resize(function(){
+  //   resizethr();
+  //   resizefif();
+  // });
 })
