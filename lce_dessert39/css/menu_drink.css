@@ -300,11 +300,11 @@ header .search a{
 }
 #select_area .pink_left{
   margin-top:45px;
-  background:linear-gradient(to right,rgba(242,200,200,1),rgba(242,200,200,1),rgba(242,200,200,0));
+  background:linear-gradient(to right,rgb(130, 181, 240),rgba(171, 201, 243,0.8),rgba(97, 144, 209,0));
 }
 #select_area .pink_right{
   margin-top:30px;
-  background:linear-gradient(to left,rgba(242,200,200,1),rgba(242,200,200,1),rgba(242,200,200,0));
+  background:linear-gradient(to left,rgb(130, 181, 240),rgba(171, 201, 243,0.8),rgba(97, 144, 209,0));
 }
 #select_area .sel_sec{
   display:none;
@@ -345,25 +345,28 @@ header .search a{
   margin:0px auto 10px;
 }
 .select > li .circle img{
-  width:80%;
+  width:90%;
 }
 .select > li span{
   width:100%;
 }
+.select > li.on .circle,
 .select > li:hover .circle{
   /* border:2px solid #b96565; */
-  border:2px solid #d88c8c;
+  border:2px solid rgb(112, 157, 207);
   box-sizing: border-box;
   padding-top:8px;
 }
+.select > li.on .cir_txt,
 .select > li:hover .cir_txt{
   width:90px;
   color:#fff;
   font-weight: 100;
-  background-color: #d88c8c;
+  background-color: rgb(112, 157, 207);
   line-height:20px;
   padding:3px 6px;
   border-radius: 20px;
+  font-size:90%;
 }
 #select_area .menu_scrollBar{
   width:80%;
@@ -390,23 +393,53 @@ header .search a{
   margin:120px auto 0;
   padding-bottom:280px;
 }
-#content{
+
+#content_area .content_title{
   max-width:1260px;
+  height:auto;
+  /* border:1px solid red; */
+  margin:auto;
+  padding:0px 0px 35px 20px;
+}
+#content_area .content_title h2{
+  font-size:42px;
+  font-weight: 700;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+#content_area .content_title > .con_tit{
+  display:none;
+}
+#contain #content_area .content_title > .con_tit.on{
+  display:block;
+}
+
+/* content */
+#content_area > ul{
+  display:none;
+}
+#content_area .content{
+  max-width:1260px;
+  /* display:none; */
+  margin:auto;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+#content_area .content.on{
   display:flex;
   flex-wrap:wrap;
   justify-content: space-between;
-  margin:auto;
 }
-#content > li{
+.content > li{
   /*max-width:300px;*/
   width:25%;
+  height:500px;
   text-align: center;
   font-family: 'SEBANG_Gothic_Bold';
   position:relative;
   padding: 0px 10px;
   box-sizing: border-box;
 }
-#content > li .item{
+.content > li .item{
   width:100%;
   height:65%;
   max-height:300px;
@@ -414,20 +447,20 @@ header .search a{
   box-shadow: 0 0 0 1px #ccc inset;
   box-sizing: border-box;
 }
-#content > li:hover .item{
-  box-shadow: 0 0 0 4px #fbc0c0 inset;
+.content > li:hover .item{
+  box-shadow: 0 0 0 4px rgba(112, 157, 207, 0.6) inset;
   box-sizing: border-box;
 }
-#content > li .item img{
+.content > li .item img{
   width:90%;
 }
-#content > li a{
+.content > li a{
   display:block;
 }
-#content > li span{
+.content > li span{
   position:absolute;
 }
-#content > li .best{
+.content > li .best{
   top:3%;
   left:7%;
   font-family: 'Nanum Gothic', sans-serif;
@@ -435,40 +468,41 @@ header .search a{
   font-weight: bold;
   font-size:17px;
 }
-#content > li .like{
+.content > li .like{
   top:55%;
   right:7%;
   cursor:pointer;
 }
-#content > li .like_red{
+.content > li .like_red{
   top:54.8%;
   right:7%;
   transition: 0.3s;
   display: none;
   cursor:pointer;
 }
-#content > li .like.on{
+.content > li .like.on{
   display: none;
 }
-#content > li .like_red.on{
+.content > li .like_red.on{
   display: block;
 }
-#content > li .txt{
+.content > li .txt{
   height:180px;
   padding-top:20px;
   font-size:18px;
 }
-#content > li .txt h3{
+.content > li .txt h3{
   margin-bottom:10px;
+  height:50px;
 }
-#content > li .txt p{
+.content > li .txt p{
   font-weight: bold;
 }
-#content > li .txt p:nth-child(2){
+.content > li .txt p:nth-child(2){
   font-size:13px;
   line-height:17px;
 }
-#content > li .txt .price{
+.content > li .txt .price{
   margin-top:15px;
   font-size:20px;
 }
@@ -801,10 +835,10 @@ footer #copy{
     padding-top:120px;
     margin:auto;
   }
-  #content{
+  .content{
     width:100%;
   }
-  #content > li{
+  .content > li{
     width:33.33%;
   }
 
@@ -883,7 +917,7 @@ footer #copy{
   /* #contain #wrapper{
     display:flex;
   } */
-  #contain #content{
+  #contain .content{
     width:100%;
     justify-content: center;
   }
@@ -921,7 +955,7 @@ footer #copy{
   #contain #wrapper #select_area .select{
     margin-top:40px;
   }
-  #content > li .txt{
+  .content > li .txt{
     font-size:1em;
   }
 }
@@ -948,11 +982,11 @@ footer #copy{
     width:66.6666%;
   }
 
-  #content > li .txt{
+  .content > li .txt{
     font-size:0.9em;
     height:190px;
   }
-  #content > li .txt p.price{
+  .content > li .txt p.price{
     font-size:1em;
   }
   #select_area{
@@ -977,14 +1011,14 @@ footer #copy{
     width:100%;
     background: url(../img/Dbanner_01.jpg) center/cover no-repeat;
   }
-  #content > li{
+  .content > li{
     padding:20px;
     width:50%;
   }
-  #contain #content_area  #content > li .txt h3{
+  #contain #content_area  .content > li .txt h3{
     font-size:15px;
   }
-  #contain #content_area  #content > li .txt p{
+  #contain #content_area  .content > li .txt p{
     font-size:11px;
   }
   #contain .mainImgs .txt p{
@@ -1000,21 +1034,21 @@ footer #copy{
     width:16.6%;
   }
   .search img{display:none;}
-  #content > li .item{
+  .content > li .item{
     max-height:600px;
   }
-  #content > li .txt{
+  .content > li .txt{
     height:140px;
   }
-  #content > li .txt .price{
+  .content > li .txt .price{
     font-size:1.7em;
   }
-  #content > li span.best{
+  .content > li span.best{
     top:6%;
     left:9%;
   }
-  #content > li span.like,
-  #content > li span.like_red{
+  .content > li span.like,
+  .content > li span.like_red{
     width:80%;
     left:48%;
   }
@@ -1022,20 +1056,20 @@ footer #copy{
 
 
 @media (max-width:600px){
-  #content > li span.best{
+  .content > li span.best{
     font-size:0.8em;
     top:7%;
     left:10%;
   }
-  #content > li span.like,
-  #content > li span.like_red{
+  .content > li span.like,
+  .content > li span.like_red{
     left:43%;
     top:53%;
   }
 }
 
 @media (max-width:480px){
-  #content > li{
+  .content > li{
     padding:30px;
     width:100%;
   }
@@ -1043,16 +1077,16 @@ footer #copy{
     width:100%;
     background: url(../img/Dbanner_01.jpg) center/cover no-repeat;
   }
-  #contain #content_area  #content > li{
+  #contain #content_area  .content > li{
     width:100%;
   }
-  #contain #content_area  #content > li .txt h3{
+  #contain #content_area  .content > li .txt h3{
     font-size:16px;
   }
-  #contain #content_area  #content > li .txt p{
+  #contain #content_area  .content > li .txt p{
     font-size:12px;
   }
-  #contain #content_area  #content > li .txt .price{
+  #contain #content_area  .content > li .txt .price{
     font-size:16px;
   }
 
